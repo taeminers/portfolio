@@ -1,11 +1,13 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Navbar } from "@/components/core/navbar";
-
+import { Navbar } from "@/components/core/Navbar";
+import { Story } from "@/components/home/Story";
+import { container } from "./globals.css";
 export default function Home() {
   return (
-    <main>
+    <div>
       <Navbar />
-    </main>
+      <main className={container}>
+        <Story />
+      </main>
+    </div>
   );
 }
