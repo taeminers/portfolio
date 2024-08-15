@@ -54,7 +54,7 @@ const rootVariables = {
   "--color4": getRandomColor(),
   "--color5": getRandomColor(),
   "--color-interactive": getRandomColor(),
-  "--circle-size": "80%",
+  "--circle-size": "55%",
   "--blending": "hard-light",
 };
 
@@ -155,9 +155,17 @@ export const g5 = style({
 export const interactive = style({
   position: "absolute",
   background: `radial-gradient(circle at center, rgba(${rootVariables["--color-interactive"]}, 0.8) 0, rgba(${rootVariables["--color-interactive"]}, 0) 50%) no-repeat`,
-  width: "100%",
-  height: "100%",
-  top: "-50%",
-  left: "-50%",
+  width: "50%",
+  height: "50%",
+  top: "-25%",
+  left: "-25%",
   opacity: 0.7,
+});
+
+export const scrollText = style({
+  position: "absolute",
+  bottom: 20,
+  left: "50%",
+  transform: "translateX(-50%)",
+  color: "white",
 });

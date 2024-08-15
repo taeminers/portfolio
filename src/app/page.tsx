@@ -7,6 +7,7 @@ export default function Home() {
       <Navbar />
       <main className={container}>
         <Story />
+        <Story />
       </main>
     </div>
   );

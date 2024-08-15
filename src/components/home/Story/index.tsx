@@ -40,6 +40,7 @@ export const Story = () => {
         <div className={S.interactive}></div>
       </div>
       <div className={S.textContainer}>Who am I</div>
+      <div className={S.scrollText}>_Scroll to Start</div>
     </div>
   );
 };
