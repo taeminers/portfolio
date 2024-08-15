@@ -8,6 +8,7 @@ globalStyle("body", {
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
   backgroundColor: "#181818",
   color: "white",
+  cursor: "none",
 });
 
 globalStyle("a", {
