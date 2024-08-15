@@ -76,6 +76,11 @@ export const textContainer = style({
   textShadow: "1px 1px rgba(0,0,0,0.1)",
 });
 
+const dimming = keyframes({
+  "0%": { opacity: 0 },
+  "100%": { opacity: 1 },
+});
+
 export const gradientBg = style({
   width: "100vw",
   height: "100vh",
@@ -84,6 +89,7 @@ export const gradientBg = style({
   background: rootVariables["--color-bg1"],
   top: 0,
   left: 0,
+  animation: `${dimming} 4s ease-in-out`,
 });
 
 export const gradientsContainer = style({
