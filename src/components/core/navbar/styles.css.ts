@@ -1,4 +1,10 @@
-import { style } from "@vanilla-extract/css";
+import { style, keyframes } from "@vanilla-extract/css";
+
+const dimming = keyframes({
+  "0%": { opacity: 0 },
+  "50%": { opacity: 0 },
+  "100%": { opacity: 1 },
+});
 
 export const container = style({
   width: "100%",
@@ -8,6 +14,7 @@ export const container = style({
   marginTop: "20px",
   position: "fixed",
   zIndex: 100,
+  animation: `${dimming} 10s ease-in-out`,
 });
 
 export const wrapper = style({
