@@ -2,5 +2,5 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return <main>hi</main>;
+  return <main>hi. Testing git</main>;
 }
