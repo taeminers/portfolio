@@ -6,7 +6,7 @@ globalStyle("body", {
   padding: 0,
   fontFamily:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-  backgroundColor: "#181818",
+  backgroundColor: "black",
   color: "white",
 });
 
