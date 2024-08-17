@@ -1,8 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./styles.css";
+import { FirstStory } from "./FirstStory";
 
 export const Story = () => {
+  const [allowScroll, setAllowScroll] = useState(false);
   useEffect(() => {
     const interBubble = document.querySelector<HTMLDivElement>(
       `.${S.interactive}`
@@ -29,18 +31,38 @@ export const Story = () => {
     move();
   }, []);
 
+  const handleClick = () => {
+    const textContainer = document.querySelector(`.${S.textContainer}`);
+    const scrollText = document.querySelector(`.${S.scrollText}`);
+    const container = document.querySelector(`.${S.gradientsContainer}`);
+    if (textContainer && scrollText) {
+      textContainer.classList.add(S.textContainerAnimated);
+      scrollText.classList.add(S.scrollTextAnimated);
+      container?.classList.add(S.scrollTextAnimated);
+      setTimeout(() => {
+        setAllowScroll(true);
+      }, 4000);
+    }
+  };
+
   return (
-    <div className={S.gradientBg}>
-      <div className={S.gradientsContainer}>
-        <div className={S.g1}></div>
-        <div className={S.g2}></div>
-        <div className={S.g3}></div>
-        <div className={S.g4}></div>
-        <div className={S.g5}></div>
-        <div className={S.interactive}></div>
-      </div>
-      <div className={S.textContainer}>Who am I</div>
-      <div className={S.scrollText}>_Scroll to Start</div>
-    </div>
+    <>
+      {allowScroll ? (
+        <FirstStory />
+      ) : (
+        <div className={S.gradientBg} onClick={handleClick}>
+          <div className={S.gradientsContainer}>
+            <div className={S.g1}></div>
+            <div className={S.g2}></div>
+            <div className={S.g3}></div>
+            <div className={S.g4}></div>
+            <div className={S.g5}></div>
+            <div className={S.interactive}></div>
+          </div>
+          <div className={S.textContainer}>Who am I</div>
+          <div className={S.scrollText}>Press to Start</div>
+        </div>
+      )}
+    </>
   );
 };

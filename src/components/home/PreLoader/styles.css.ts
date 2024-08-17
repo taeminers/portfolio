@@ -16,8 +16,11 @@ export const container = style({
   alignItems: "center",
   zIndex: 1000,
   backgroundColor: "black",
+  gap: "6px",
 });
 
 export const text = style({
-  animation: `${flicker} 7s ease-in-out`, // Apply the flickering animation
+  position: "relative",
+  zIndex: 1,
+  animation: `${flicker} 7s ease-in-out`,
 });

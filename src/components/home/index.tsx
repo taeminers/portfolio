@@ -14,8 +14,8 @@ export const HomePage = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <PreLoader />;
-  }
+  // if (loading) {
+  //   return <PreLoader />;
+  // }
   return <Story />;
 };
