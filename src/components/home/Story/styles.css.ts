@@ -74,6 +74,7 @@ export const textContainer = style({
   opacity: 0.8,
   userSelect: "none",
   textShadow: "1px 1px rgba(0,0,0,0.1)",
+  transition: "opacity 0.5s ease, transform 0.5s ease", // Ensure smooth transition
 });
 
 const dimming = keyframes({
@@ -168,10 +169,35 @@ export const interactive = style({
   opacity: 0.7,
 });
 
+const flicker = keyframes({
+  "0%": { opacity: 1 },
+  "50%": { opacity: 0.1 },
+  "100%": { opacity: 1 },
+});
+
 export const scrollText = style({
   position: "absolute",
   bottom: 20,
   left: "50%",
   transform: "translateX(-50%)",
   color: "white",
+  animation: `${flicker} 3s infinite`,
+});
+
+const textFlyUp = keyframes({
+  "0%": { opacity: 1, transform: "translateY(0)" },
+  "100%": { opacity: 0, transform: "translateY(-200px)" },
+});
+
+export const textContainerAnimated = style({
+  animation: `${textFlyUp} 3s forwards`, // Apply the animation
+});
+
+const fadeOut = keyframes({
+  "0%": { opacity: 0.6 },
+  "100%": { opacity: 0 },
+});
+
+export const scrollTextAnimated = style({
+  animation: `${fadeOut} 3s forwards`, // Apply the animation
 });

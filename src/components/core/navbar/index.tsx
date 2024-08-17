@@ -25,7 +25,7 @@ export const Navbar = () => {
 
   return (
     <div className={S.container}>
-      <div className={scrolled ? S.scrolledWrapper : S.wrapper}>
+      <div className={S.wrapper}>
         <Logo />
         <Navigation />
       </div>
