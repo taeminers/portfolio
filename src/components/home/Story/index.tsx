@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import * as S from "./styles.css";
-import { FirstStory } from "./FirstStory";
+import { StoryList } from "../StoryList";
 
 export const Story = () => {
   const [allowScroll, setAllowScroll] = useState(false);
@@ -48,7 +48,7 @@ export const Story = () => {
   return (
     <>
       {allowScroll ? (
-        <FirstStory />
+        <StoryList />
       ) : (
         <div className={S.gradientBg} onClick={handleClick}>
           <div className={S.gradientsContainer}>
@@ -59,7 +59,7 @@ export const Story = () => {
             <div className={S.g5}></div>
             <div className={S.interactive}></div>
           </div>
-          <div className={S.textContainer}>Who am I</div>
+          <div className={S.textContainer}>My Story</div>
           <div className={S.scrollText}>Press to Start</div>
         </div>
       )}
