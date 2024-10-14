@@ -1,39 +1,45 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styles.css";
 
 export const FirstStory = () => {
+  useEffect(() => {
+    const interBubble = document.querySelector<HTMLDivElement>(
+      `.${S.interactive}`
+    )!;
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
+
+    function move() {
+      curX += (tgX - curX) / 20;
+      curY += (tgY - curY) / 20;
+      interBubble.style.transform = `translate(${Math.round(
+        curX
+      )}px, ${Math.round(curY)}px)`;
+      requestAnimationFrame(move);
+    }
+
+    window.addEventListener("mousemove", (event) => {
+      tgX = event.clientX;
+      tgY = event.clientY;
+    });
+
+    move();
+  }, []);
+
   return (
-    <div className={S.container}>
-      <div className={S.first}>
-        <div>Chapter 1.</div>
-        <div>Drive & Motivation</div>
+    <div className={S.gradientBg}>
+      <div className={S.gradientsContainer}>
+        <div className={S.g1}></div>
+        <div className={S.g2}></div>
+        <div className={S.g3}></div>
+        <div className={S.g4}></div>
+        <div className={S.g5}></div>
+        <div className={S.interactive}></div>
       </div>
-      <div className={S.contentContainer}>
-        <div className={S.content}>
-          <div className={S.second}>
-            <div className={S.wrapper}>
-              <div>I've always wanted to be a Someone.</div>
-              <div>Help bring positive change to the world.</div>
-            </div>
-          </div>
-          <div className={S.second}>
-            <div className={S.wrapper}>
-              <div>I've found the meaning of life.</div>
-              <div>
-                Something that I would do happily for the rest of my life.
-              </div>
-            </div>
-          </div>
-          <div className={S.second}>
-            <div className={S.wrapper}>
-              <div>I've found the meaning of life.</div>
-              <div>
-                Something that I would do happily for the rest of my life.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className={S.textContainer}>My Story</div>
+      <div className={S.scrollText}>Scroll to Start</div>
     </div>
   );
 };
