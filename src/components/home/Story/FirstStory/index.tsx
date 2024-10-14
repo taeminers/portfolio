@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import * as S from "./styles.css";
+import { DescriptionLoop } from "./DescriptionLoop";
 
 export const FirstStory = () => {
   useEffect(() => {
@@ -38,7 +39,12 @@ export const FirstStory = () => {
         <div className={S.g5}></div>
         <div className={S.interactive}></div>
       </div>
-      <div className={S.textContainer}>My Story</div>
+      <div className={S.textContainer}>
+        <div className={S.leftSide}>I am</div>
+        <div className={S.rightSide}>
+          <DescriptionLoop />
+        </div>
+      </div>
       <div className={S.scrollText}>Scroll to Start</div>
     </div>
   );
