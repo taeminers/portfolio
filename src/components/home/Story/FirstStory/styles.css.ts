@@ -60,7 +60,7 @@ const rootVariables = {
 
 // Define styles
 export const textContainer = style({
-  zIndex: 100,
+  zIndex: 10,
   width: "100vw",
   height: "100vh",
   display: "flex",
@@ -74,8 +74,13 @@ export const textContainer = style({
   opacity: 0.8,
   userSelect: "none",
   textShadow: "1px 1px rgba(0,0,0,0.1)",
-  transition: "opacity 0.5s ease, transform 0.5s ease", // Ensure smooth transition
+  transition: "opacity 0.5s ease, transform 0.5s ease",
+  gap: "10px", // Ensure smooth transition
 });
+
+export const leftSide = style({});
+
+export const rightSide = style({});
 
 const dimming = keyframes({
   "0%": { opacity: 0 },
@@ -90,6 +95,7 @@ export const gradientBg = style({
   background: rootVariables["--color-bg1"],
   top: 0,
   left: 0,
+  zIndex: 1,
   animation: `${dimming} 4s ease-in-out`,
   // Add the pseudo-element for the gradient overlay
   "::after": {
@@ -109,9 +115,12 @@ export const gradientsContainer = style({
   filter: "url(#goo) blur(40px)",
   width: "80%",
   height: "80%",
+  zIndex: 1,
 });
 
 export const g1 = style({
+  zIndex: 1,
+
   position: "absolute",
   background: `radial-gradient(circle at center, rgba(${rootVariables["--color1"]}, 0.8) 0, rgba(${rootVariables["--color1"]}, 0) 50%) no-repeat`,
   width: rootVariables["--circle-size"],
@@ -124,6 +133,8 @@ export const g1 = style({
 });
 
 export const g2 = style({
+  zIndex: 1,
+
   position: "absolute",
   background: `radial-gradient(circle at center, rgba(${rootVariables["--color2"]}, 0.8) 0, rgba(${rootVariables["--color2"]}, 0) 50%) no-repeat`,
   width: rootVariables["--circle-size"],
@@ -136,6 +147,8 @@ export const g2 = style({
 });
 
 export const g3 = style({
+  zIndex: 1,
+
   position: "absolute",
   background: `radial-gradient(circle at center, rgba(${rootVariables["--color3"]}, 0.8) 0, rgba(${rootVariables["--color3"]}, 0) 50%) no-repeat`,
   width: rootVariables["--circle-size"],
@@ -148,6 +161,8 @@ export const g3 = style({
 });
 
 export const g4 = style({
+  zIndex: 1,
+
   position: "absolute",
   background: `radial-gradient(circle at center, rgba(${rootVariables["--color4"]}, 0.8) 0, rgba(${rootVariables["--color4"]}, 0) 50%) no-repeat`,
   width: rootVariables["--circle-size"],
@@ -160,6 +175,8 @@ export const g4 = style({
 });
 
 export const g5 = style({
+  zIndex: 1,
+
   position: "absolute",
   background: `radial-gradient(circle at center, rgba(${rootVariables["--color5"]}, 0.8) 0, rgba(${rootVariables["--color5"]}, 0) 50%) no-repeat`,
   width: `calc(${rootVariables["--circle-size"]} * 2)`,
@@ -209,8 +226,4 @@ export const textContainerAnimated = style({
 const fadeOut = keyframes({
   "0%": { opacity: 0.6 },
   "100%": { opacity: 0 },
-});
-
-export const scrollTextAnimated = style({
-  animation: `${fadeOut} 3s forwards`, // Apply the animation
 });
