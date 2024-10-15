@@ -5,9 +5,9 @@ export const container = style({
   padding: "0px 20px",
   boxSizing: "border-box",
   alignItems: "center",
-  marginTop: "20px",
   position: "fixed",
   zIndex: 100,
+  background: "linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 50%)", // Adjusted gradient background
 });
 
 export const wrapper = style({
