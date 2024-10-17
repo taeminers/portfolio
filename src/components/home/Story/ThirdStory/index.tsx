@@ -19,6 +19,7 @@ export const ThirdStory = () => {
           <div>Picture</div>
           <div>Picture</div>
           <div>Picture</div>
+          <div>Picture</div>
         </div>
       </Flex>
     </div>
