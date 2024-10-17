@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";
 import * as S from "./styles.css";
