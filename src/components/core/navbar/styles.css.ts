@@ -23,3 +23,5 @@ export const scrolledWrapper = style({
   justifyContent: "space-between",
   padding: "18px 58px",
 });
+
+export const scrolled = style({});

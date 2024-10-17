@@ -4,6 +4,7 @@ import { globalStyle, style } from "@vanilla-extract/css";
 globalStyle("body", {
   margin: 0,
   padding: 0,
+  overflowX: "hidden",
   fontFamily:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
   backgroundColor: "black",

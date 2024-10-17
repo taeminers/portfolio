@@ -13,6 +13,7 @@ export const SecondStory = () => {
         But I am also passionate about start ups, and solving problems.
       </Text>
       <div className={S.imageWrapper}>
+        {/* image should grow as scrolling */}
         <Image
           src={"/introduction.webp"}
           width={500}
