@@ -8,20 +8,33 @@ export const ThirdStory = () => {
         <Text variant={"heading3"}>How I Think</Text>
         <Text variant={"heading2"}>Think</Text>
       </Flex>
-      <Flex gap={12}>
+      {/* <Flex gap={12}>
         <div className={S.featured}>
           <Flex>
             <div className={S.featuredImage}>Picture</div>
           </Flex>
         </div>
         <div className={S.grid}>
-          <div>Picture</div>
-          <div>Picture</div>
-          <div>Picture</div>
-          <div>Picture</div>
-          <div>Picture</div>
+          <div style={{ background: "red" }}>Picture</div>
+          <div style={{ background: "blue" }}>Picture</div>
+          <div style={{ background: "green" }}>Picture</div>
+          <div style={{ background: "orange" }}>Picture</div>
         </div>
-      </Flex>
+      </Flex> */}
+      <div className={S.grid}>
+        <div style={{ background: "red", width: "40vw", height: "40vh" }}>
+          Picture
+        </div>
+        <div style={{ background: "blue", width: "40vw", height: "40vh" }}>
+          Picture
+        </div>
+        <div style={{ background: "green", width: "40vw", height: "40vh" }}>
+          Picture
+        </div>
+        <div style={{ background: "orange", width: "40vw", height: "40vh" }}>
+          Picture
+        </div>
+      </div>
     </div>
   );
 };

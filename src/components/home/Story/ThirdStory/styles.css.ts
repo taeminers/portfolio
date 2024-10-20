@@ -2,9 +2,12 @@ import { style } from "@vanilla-extract/css";
 
 export const container = style({
   width: "100%",
+  height: "606px",
   background: "white",
   color: "black",
   padding: "40px 60px",
+  overflow: "hidden",
+  transition: "height 1s",
 });
 
 export const featured = style({
@@ -24,5 +27,12 @@ export const featuredImage = style({
   border: "1px solid black",
   background: "black",
   width: "100%",
-  minHeight: "300px",
+  minHeight: "500px",
+  flexShrink: 0,
+});
+
+export const test = style({
+  background: "red",
+  height: "50vh",
+  width: "50vw",
 });
