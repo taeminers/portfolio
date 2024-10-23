@@ -6,14 +6,14 @@ export const ThirdStory = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/medium/me", {
+        const publicationsResponse = await fetch(`/api/medium/publications`, {
           method: "GET",
         });
-        if (!response.ok) {
+        if (!publicationsResponse.ok) {
           throw new Error("Failed to fetch data from Medium API");
         }
-        const { data } = await response.json();
-        console.log(data);
+        const publicationsData = await publicationsResponse.json();
+        console.log("publicationsData", publicationsData);
       } catch (error) {
         console.error("Error fetching data from Medium API:", error);
         const errorMessage =
