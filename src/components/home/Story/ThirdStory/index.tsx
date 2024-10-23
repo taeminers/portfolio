@@ -1,8 +1,10 @@
 import Flex from "@/components/core/Flex";
 import * as S from "./styles.css";
 import Text from "@/components/core/Text";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { BlogCard } from "../../MediumBlog/BlogCard";
 export const ThirdStory = () => {
+  const [mediumPosts, setMediumPosts] = useState<MediumPostResponse>();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -14,6 +16,7 @@ export const ThirdStory = () => {
         }
         const publicationsData = await publicationsResponse.json();
         console.log("publicationsData", publicationsData);
+        setMediumPosts(publicationsData);
       } catch (error) {
         console.error("Error fetching data from Medium API:", error);
         const errorMessage =
@@ -29,18 +32,15 @@ export const ThirdStory = () => {
         <Text variant={"heading2"}>Think</Text>
       </Flex>
       <div className={S.grid}>
-        <div style={{ background: "red", width: "40vw", height: "40vh" }}>
-          Picture
-        </div>
-        <div style={{ background: "blue", width: "40vw", height: "40vh" }}>
-          Picture
-        </div>
-        <div style={{ background: "green", width: "40vw", height: "40vh" }}>
-          Picture
-        </div>
-        <div style={{ background: "orange", width: "40vw", height: "40vh" }}>
-          Picture
-        </div>
+        {mediumPosts?.items.slice(0, 4).map((post) => (
+          <BlogCard
+            key={post.guid}
+            title={post.title}
+            description={post.description}
+            date={post.pubDate}
+            link={post.link}
+          />
+        ))}
       </div>
     </div>
   );
