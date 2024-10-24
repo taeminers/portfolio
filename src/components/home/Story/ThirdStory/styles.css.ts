@@ -6,12 +6,15 @@ export const container = style({
   color: "black",
   padding: "40px 60px",
   overflow: "hidden",
-  transition: "height 1s",
+});
+
+export const wrapper = style({
+  width: "100%",
 });
 
 export const featured = style({
   flex: "0 0 33%", // Takes up 33% of the available space
-  backgroundColor: "#f0f0f0", // Example background color
+  backgroundColor: "red", // Example background color
 });
 
 export const grid = style({
@@ -26,15 +29,7 @@ export const grid = style({
 });
 
 export const featuredImage = style({
-  border: "1px solid black",
-  background: "black",
   width: "100%",
   minHeight: "500px",
   flexShrink: 0,
-});
-
-export const test = style({
-  background: "red",
-  height: "50vh",
-  width: "50vw",
 });

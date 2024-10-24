@@ -31,17 +31,22 @@ export const ThirdStory = () => {
         <Text variant={"heading3"}>How I Think</Text>
         <Text variant={"heading2"}>Think</Text>
       </Flex>
-      <div className={S.grid}>
-        {mediumPosts?.items.slice(0, 4).map((post) => (
-          <BlogCard
-            key={post.guid}
-            title={post.title}
-            description={post.description}
-            date={post.pubDate}
-            link={post.link}
-          />
-        ))}
-      </div>
+      <Flex gap={20} className={S.wrapper}>
+        <div className={S.featured}>
+          <div className={S.featuredImage}></div>
+        </div>
+        <div className={S.grid}>
+          {mediumPosts?.items.slice(0, 4).map((post) => (
+            <BlogCard
+              key={post.guid}
+              title={post.title}
+              description={post.description}
+              date={post.pubDate}
+              link={post.link}
+            />
+          ))}
+        </div>
+      </Flex>
     </div>
   );
 };
