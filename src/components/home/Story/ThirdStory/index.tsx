@@ -26,6 +26,7 @@ export const ThirdStory = () => {
     };
     fetchData();
   }, []);
+  // console.log("third story render");
   return (
     <div className={S.container}>
       <Flex flexDirection="column">

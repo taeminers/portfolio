@@ -13,6 +13,11 @@ export const MediumAccount = ({ feed }: MediumAccountProps) => {
     <Flex className={S.container} flexDirection="column">
       <Text variant="body1">{feed.description}</Text>
       <Image src={feed.image} width={200} height={200} alt={feed.title} />
+      <button
+        onClick={() => window.open("https://notanordinarydev.medium.com/")}
+      >
+        Check me out
+      </button>
     </Flex>
   );
 };
