@@ -1,17 +1,19 @@
-type MediumPostResponse = {
-  feed: {
-    author: string;
-    description: string;
-    image: string;
-    link: string;
-    title: string;
-    url: string;
-  };
+export type MediumPostResponse = {
+  feed: Feed;
   items: SingleBlogPost[];
   status: string;
 };
 
-type SingleBlogPost = {
+export type Feed = {
+  author: string;
+  description: string;
+  image: string;
+  link: string;
+  title: string;
+  url: string;
+};
+
+export type SingleBlogPost = {
   author: string;
   categories: string[];
   content: string;
