@@ -10,15 +10,16 @@ export const container = style({
 
 export const wrapper = style({
   width: "100%",
+  overflow: "hidden",
 });
 
 export const featured = style({
-  flex: "0 0 33%", // Takes up 33% of the available space
+  // flex: "0 0 33%", // Takes up 33% of the available space
   backgroundColor: "red", // Example background color
 });
 
 export const grid = style({
-  flex: "0 0 66%", // Takes up 66% of the available space
+  // flex: "0 0 66%", // Takes up 66% of the available space
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)", // 2 columns
   gridTemplateRows: "repeat(2, 1fr)", // 2 rows

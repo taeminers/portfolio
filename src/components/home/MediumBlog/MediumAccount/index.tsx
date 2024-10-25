@@ -8,9 +8,13 @@ interface MediumAccountProps {
   feed: Feed;
 }
 export const MediumAccount = ({ feed }: MediumAccountProps) => {
-  console.log(feed);
   return (
-    <Flex className={S.container} flexDirection="column">
+    <Flex
+      className={S.container}
+      flexDirection="column"
+      items={"center"}
+      gap={20}
+    >
       <Text variant="body1">{feed.description}</Text>
       <Image src={feed.image} width={200} height={200} alt={feed.title} />
       <button

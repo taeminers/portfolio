@@ -6,4 +6,5 @@ export const container = style({
   flexShrink: 0,
   height: "100%",
   color: "red",
+  textAlign: "center",
 });
