@@ -14,12 +14,12 @@ export const SecondStory = () => {
       </Text>
       <div className={S.imageWrapper}>
         {/* image should grow as scrolling */}
-        <Image
+        {/* <Image
           src={"/introduction.webp"}
           width={500}
           height={500}
           alt="intro"
-        />
+        /> */}
       </div>
     </div>
   );

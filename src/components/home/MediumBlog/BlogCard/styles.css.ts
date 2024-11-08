@@ -2,6 +2,7 @@ import { style } from "@vanilla-extract/css";
 
 export const container = style({
   width: "100%",
+  height: "100%",
 });
 
 export const pictureArea = style({
@@ -25,7 +26,6 @@ export const description = style({
   WebkitBoxOrient: "vertical",
   WebkitLineClamp: 2,
   fontSize: "14px",
-  maxWidth: "250px",
   textOverflow: "ellipsis", // Add text overflow ellipsis
   height: "fit-content",
 });

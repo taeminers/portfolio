@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import { BlogCard } from "../../MediumBlog/BlogCard";
 import { MediumAccount } from "../../MediumBlog/MediumAccount";
 import { MediumPostResponse } from "@/dto/response/MediumPostResponse";
+
 export const ThirdStory = () => {
   const [mediumPosts, setMediumPosts] = useState<MediumPostResponse>();
+  console.log("mediumPosts", mediumPosts);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -33,10 +35,10 @@ export const ThirdStory = () => {
         <Text variant={"heading3"}>How I Think</Text>
         <Text variant={"heading2"}>Think</Text>
       </Flex>
-      <Flex gap={20} className={S.wrapper}>
+      <div className={S.contentWrapper}>
         {mediumPosts && <MediumAccount feed={mediumPosts?.feed} />}
         <div className={S.grid}>
-          {mediumPosts?.items.slice(0, 4).map((post) => (
+          {mediumPosts?.items.slice(0, 6).map((post) => (
             <BlogCard
               key={post.guid}
               title={post.title}
@@ -46,7 +48,7 @@ export const ThirdStory = () => {
             />
           ))}
         </div>
-      </Flex>
+      </div>
     </div>
   );
 };

@@ -8,9 +8,14 @@ export const container = style({
   overflow: "hidden",
 });
 
-export const wrapper = style({
-  width: "100%",
-  overflow: "hidden",
+export const contentWrapper = style({
+  display: "flex",
+  gap: "20px",
+  "@media": {
+    "screen and (max-width: 920px)": {
+      flexDirection: "column",
+    },
+  },
 });
 
 export const featured = style({
@@ -19,14 +24,18 @@ export const featured = style({
 });
 
 export const grid = style({
-  // flex: "0 0 66%", // Takes up 66% of the available space
   display: "grid",
-  gridTemplateColumns: "repeat(2, 1fr)", // 2 columns
-  gridTemplateRows: "repeat(2, 1fr)", // 2 rows
-  gap: "10px",
-  gridAutoRows: "1fr", // Ensures each row has equal height
-  height: "100%", // Ensures the grid container takes up the full height of its parent
-  boxSizing: "border-box",
+  gap: "16px",
+  gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+  gridAutoRows: "minmax(100px, auto)",
+  "@media": {
+    "screen and (max-width: 768px)": {
+      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+    },
+    "screen and (max-width: 480px)": {
+      gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+    },
+  },
 });
 
 export const featuredImage = style({
