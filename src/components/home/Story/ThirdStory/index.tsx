@@ -30,10 +30,10 @@ export const ThirdStory = () => {
   }, []);
   // console.log("third story render");
   return (
-    <div className={S.container}>
+    <Flex className={S.container} flexDirection="column" gap={50}>
       <Flex flexDirection="column">
         <Text variant={"heading3"}>How I Think</Text>
-        <Text variant={"heading2"}>Think</Text>
+        <Text variant={"heading2"}>Dev Blog</Text>
       </Flex>
       <div className={S.contentWrapper}>
         {mediumPosts && <MediumAccount feed={mediumPosts?.feed} />}
@@ -49,6 +49,6 @@ export const ThirdStory = () => {
           ))}
         </div>
       </div>
-    </div>
+    </Flex>
   );
 };
