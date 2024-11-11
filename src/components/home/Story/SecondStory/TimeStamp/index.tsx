@@ -2,6 +2,9 @@ import Text from "@/components/core/Text";
 import Flex from "@/components/core/Flex";
 import * as S from "./styles.css";
 import { useState } from "react";
+import { match } from "ts-pattern";
+import { FirstJob } from "../FirstJob";
+import { SecondJob } from "../SecondJob";
 export const TimeStamp = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const years = [2021, 2022, 2023, 2024];
@@ -19,6 +22,16 @@ export const TimeStamp = () => {
           </div>
         ))}
       </Flex>
+      <div className={S.detailSection}>
+        {match(selectedTab)
+          .with(0, () => <FirstJob />)
+          .with(1, () => <SecondJob />)
+          .with(2, () => <></>)
+          .with(3, () => <></>)
+          .otherwise(() => (
+            <></>
+          ))}
+      </div>
     </Flex>
   );
 };

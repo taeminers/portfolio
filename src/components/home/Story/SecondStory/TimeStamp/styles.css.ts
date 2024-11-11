@@ -11,3 +11,7 @@ export const selectedTab = style({
   color: "lightgray",
   padding: "8px 12px",
 });
+
+export const detailSection = style({
+  marginTop: "28px",
+});
