@@ -3,6 +3,7 @@ import * as S from "./styles.css";
 import { color } from "@/components/core/Text/styles.css";
 import Image from "next/image";
 import Flex from "@/components/core/Flex";
+import { TimeStamp } from "./TimeStamp";
 
 export const SecondStory = () => {
   return (
@@ -12,7 +13,7 @@ export const SecondStory = () => {
           Hey, I'm
         </Text>
         <div className={S.name}>Taemin Lee</div>
-        <Text variant={"body4"} color={"blue-100"}>
+        <Text variant={"body4"} color={"gray-100"}>
           I'm a software engineer based in Seoul, South Korea. I'm passionate
           about building software products that make a difference.
         </Text>
@@ -23,6 +24,7 @@ export const SecondStory = () => {
           <div>{"----->"}</div>
         </Flex>
       </Flex>
+      <TimeStamp />
     </div>
   );
 };
