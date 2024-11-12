@@ -1,14 +1,15 @@
 import { style } from "@vanilla-extract/css";
 
 export const container = style({
-  background: "red",
+  width: "100%",
+  height: "100%",
 });
 
 export const pictureArea = style({
   borderRadius: "12px 12px 0px 0px",
   height: "200px",
   color: "white",
-  background: "red",
+  background: "blue",
 });
 
 export const descriptionArea = style({
@@ -16,6 +17,7 @@ export const descriptionArea = style({
   padding: "16px",
   borderRadius: "0px 0px 12px 12px",
   minHeight: "120px",
+  width: "100%",
 });
 
 export const description = style({

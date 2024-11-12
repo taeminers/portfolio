@@ -11,7 +11,7 @@ interface BlogCardProps {
 
 export const BlogCard = ({ title, description, date, link }: BlogCardProps) => {
   return (
-    <Flex flexDirection="column">
+    <Flex flexDirection="column" className={S.container}>
       <Flex className={S.pictureArea} justify="center" items="center">
         {title}
       </Flex>
