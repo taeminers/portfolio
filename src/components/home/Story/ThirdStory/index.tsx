@@ -8,7 +8,6 @@ import { MediumPostResponse } from "@/dto/response/MediumPostResponse";
 
 export const ThirdStory = () => {
   const [mediumPosts, setMediumPosts] = useState<MediumPostResponse>();
-  console.log("mediumPosts", mediumPosts);
   useEffect(() => {
     const fetchData = async () => {
       try {

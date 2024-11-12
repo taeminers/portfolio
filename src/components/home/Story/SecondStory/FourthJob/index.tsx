@@ -5,11 +5,25 @@ import * as S from "./styles.css";
 export const FourthJob = () => {
   return (
     <Flex justify="between">
-      <Flex flexDirection="column">
-        <Text variant={"heading6"}>Software Developer</Text>
-        <Text variant={"body5"}>FACTBLOCK: Frontend Developer</Text>
+      <Flex flexDirection="column" gap={12}>
+        <Text variant={"heading6"} color={"base-lighter"}>
+          Software Developer
+        </Text>
+        <Flex flexDirection="column" gap={12} className={S.container}>
+          <Text variant={"body5"} color={"base-lighter"}>
+            FACTBLOCK: Frontend Developer
+          </Text>
+          <Text variant={"body6"} color={"base-white"}>
+            - Pitch Deck
+          </Text>
+          <Text variant={"body6"} color={"base-white"}>
+            - Learnings
+          </Text>
+        </Flex>
       </Flex>
-      <Text variant={"body6"}>Feb 2024 - current</Text>
+      <Text variant={"body6"} color={"base-lighter"}>
+        Feb 2024 - current
+      </Text>
     </Flex>
   );
 };
