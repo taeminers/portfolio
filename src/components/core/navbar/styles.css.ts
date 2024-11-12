@@ -1,13 +1,13 @@
-import { style } from "@vanilla-extract/css";
+import { style, keyframes } from "@vanilla-extract/css";
 
 export const container = style({
   width: "100%",
-  padding: "30px 200px",
+  padding: "0px 20px",
   boxSizing: "border-box",
   alignItems: "center",
-  marginTop: "20px",
   position: "fixed",
   zIndex: 100,
+  background: "linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 50%)", // Adjusted gradient background
 });
 
 export const wrapper = style({
@@ -23,3 +23,5 @@ export const scrolledWrapper = style({
   justifyContent: "space-between",
   padding: "18px 58px",
 });
+
+export const scrolled = style({});
