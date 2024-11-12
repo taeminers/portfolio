@@ -2,14 +2,16 @@ import { style } from "@vanilla-extract/css";
 
 export const container = style({
   width: "100%",
-  padding: "20px 120px",
+  padding: "40px 80px",
   display: "flex",
   flexDirection: "column",
   gap: "120px",
+  paddingBottom: "200px",
+  borderBottom: "1px solid #E5E5E5",
 });
 
 export const name = style({
-  fontSize: "52px",
+  fontSize: "100px",
   fontWeight: 700,
   background: "linear-gradient(90deg, white 0%, red 100%)", // Corrected color codes
   WebkitBackgroundClip: "text",
