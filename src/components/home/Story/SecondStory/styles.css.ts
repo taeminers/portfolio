@@ -7,20 +7,19 @@ export const container = style({
   flexDirection: "column",
   gap: "120px",
   paddingBottom: "200px",
-  borderBottom: "1px solid #E5E5E5",
 });
 
 export const name = style({
   fontSize: "100px",
   fontWeight: 700,
-  background: "linear-gradient(90deg, white 0%, red 100%)", // Corrected color codes
+  background: "linear-gradient(90deg, #9845E8 0%, #33D2FF 55% , #DD5789 100%)", // Corrected color codes
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
 });
 
 export const gradientText = style({
-  background: "linear-gradient(90deg, #FJJ593 0%, #BC7198 100%)",
+  background: "linear-gradient(90deg, #9845E8 0%, #33D2FF 55% ,DD5789 100%)", // Corrected color codes
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
 });
