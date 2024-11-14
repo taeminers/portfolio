@@ -8,3 +8,9 @@ export const container = style({
   color: "red",
   textAlign: "center",
 });
+
+export const avatar = style({
+  borderRadius: "100px",
+  width: "50px",
+  height: "50px",
+});

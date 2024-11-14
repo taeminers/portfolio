@@ -30,23 +30,28 @@ export const ThirdStory = () => {
   // console.log("third story render");
   return (
     <Flex className={S.container} flexDirection="column" gap={50}>
-      <Flex flexDirection="column">
-        <Text variant={"heading3"}>How I Think</Text>
-        <Text variant={"heading2"}>Dev Blog</Text>
-      </Flex>
-      <div className={S.contentWrapper}>
+      <Flex justify="between">
+        <Flex flexDirection="column">
+          <Text variant={"heading3"} color={"base-white"}>
+            How I Think
+          </Text>
+          <Text variant={"heading2"} color={"base-white"}>
+            Dev Blog
+          </Text>
+        </Flex>
         {mediumPosts && <MediumAccount feed={mediumPosts?.feed} />}
-        <div className={S.grid}>
-          {mediumPosts?.items.slice(0, 6).map((post) => (
-            <BlogCard
-              key={post.guid}
-              title={post.title}
-              description={post.description}
-              date={post.pubDate}
-              link={post.link}
-            />
-          ))}
-        </div>
+      </Flex>
+
+      <div className={S.grid}>
+        {mediumPosts?.items.slice(0, 6).map((post) => (
+          <BlogCard
+            key={post.guid}
+            title={post.title}
+            description={post.description}
+            date={post.pubDate}
+            link={post.link}
+          />
+        ))}
       </div>
     </Flex>
   );

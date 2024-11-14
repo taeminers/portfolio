@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { FirstStory } from "./FirstStory";
 import { SecondStory } from "./SecondStory";
 import { ThirdStory } from "./ThirdStory";
@@ -10,7 +10,9 @@ export const Story = () => {
     <>
       <FirstStory />
       <SecondStory />
-      <ThirdStory />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ThirdStory />
+      </Suspense>
       <FourthStory />
     </>
   );
