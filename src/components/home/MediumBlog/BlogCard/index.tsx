@@ -20,8 +20,13 @@ export const BlogCard = ({ title, description, date, link }: BlogCardProps) => {
         justify="between"
         flexDirection="column"
       >
-        <Text className={S.description}>{description}</Text>
-        <Text>{date}</Text>
+        <div
+          className={S.description}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+        <Text variant={"heading11"} color={"blue-500"}>
+          {date}
+        </Text>
       </Flex>
     </Flex>
   );

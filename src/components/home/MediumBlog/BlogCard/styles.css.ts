@@ -6,18 +6,16 @@ export const container = style({
 });
 
 export const pictureArea = style({
-  borderRadius: "12px 12px 0px 0px",
   height: "200px",
   color: "white",
-  background: "blue",
+  background: "black",
+  outline: "1px dotted gray",
 });
 
 export const descriptionArea = style({
-  background: "lightgrey",
-  padding: "16px",
-  borderRadius: "0px 0px 12px 12px",
-  minHeight: "120px",
+  // minHeight: "100px",
   width: "100%",
+  fontSize: "11px",
 });
 
 export const description = style({
@@ -25,7 +23,8 @@ export const description = style({
   display: "-webkit-box",
   WebkitBoxOrient: "vertical",
   WebkitLineClamp: 2,
-  fontSize: "14px",
+  fontSize: "11px",
   textOverflow: "ellipsis", // Add text overflow ellipsis
   height: "fit-content",
+  color: "white",
 });
