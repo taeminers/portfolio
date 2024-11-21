@@ -17,10 +17,13 @@ export const TimeStamp = () => {
         {years.map((year, index) => (
           <div
             key={year}
-            className={selectedTab === index ? S.selectedTab : S.timeText}
+            className={S.tab({ selected: selectedTab === index })}
             onClick={() => setSelectedTab(index)}
           >
-            {year}
+            <Text color={"base-white"}>{year}</Text>
+            {selectedTab === index && (
+              <Text color={"blue-500"}>I turned {23 + index}</Text>
+            )}
           </div>
         ))}
       </Flex>

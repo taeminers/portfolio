@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { BlogCard } from "../../MediumBlog/BlogCard";
 import { MediumAccount } from "../../MediumBlog/MediumAccount";
 import { MediumPostResponse } from "@/dto/response/MediumPostResponse";
+import { filterNewline } from "@/utils/parse/filterNewline";
 
 export const ThirdStory = () => {
   const [mediumPosts, setMediumPosts] = useState<MediumPostResponse>();
@@ -47,7 +48,7 @@ export const ThirdStory = () => {
           <BlogCard
             key={post.guid}
             title={post.title}
-            description={post.description}
+            description={filterNewline(post.description)}
             date={post.pubDate}
             link={post.link}
           />

@@ -10,6 +10,8 @@ export const pictureArea = style({
   color: "white",
   background: "black",
   outline: "1px dotted gray",
+  padding: "16px",
+  textAlign: "center",
 });
 
 export const descriptionArea = style({
