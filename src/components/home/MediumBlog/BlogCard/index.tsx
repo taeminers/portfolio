@@ -12,7 +12,11 @@ interface BlogCardProps {
 export const BlogCard = ({ title, description, date, link }: BlogCardProps) => {
   console.log("description", description);
   return (
-    <Flex flexDirection="column" className={S.container}>
+    <Flex
+      flexDirection="column"
+      className={S.container}
+      onClick={() => window.open(link)}
+    >
       <Flex className={S.pictureArea} justify="center" items="center">
         {title}
       </Flex>

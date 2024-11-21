@@ -24,7 +24,7 @@ export const description = style({
   overflow: "hidden", // Ensure overflow is hidden
   display: "-webkit-box",
   WebkitBoxOrient: "vertical",
-  WebkitLineClamp: 2,
+  WebkitLineClamp: 1,
   fontSize: "11px",
   textOverflow: "ellipsis", // Add text overflow ellipsis
   height: "fit-content",
