@@ -9,7 +9,12 @@ interface MediumAccountProps {
 }
 export const MediumAccount = ({ feed }: MediumAccountProps) => {
   return (
-    <Flex gap={20} items={"center"}>
+    <Flex
+      gap={20}
+      items={"center"}
+      onClick={() => window.open("https://notanordinarydev.medium.com/")}
+      className={S.container}
+    >
       <Image
         className={S.avatar}
         src={feed.image}

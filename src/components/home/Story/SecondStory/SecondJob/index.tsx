@@ -12,7 +12,16 @@ export const SecondJob = () => {
           <Text variant={"body5"} color={"base-lighter"}>
             Grids: Short form News
           </Text>
-          <Text variant={"body6"} color={"base-white"}>
+          <Text
+            variant={"body6"}
+            color={"base-white"}
+            style={{ cursor: "pointer" }}
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1DeaR1ZQtBqy1MFP5HWhuaMbigxeZtfWL/view?usp=sharing"
+              )
+            }
+          >
             - Pitch Deck
           </Text>
           <Text variant={"body6"} color={"base-white"}>

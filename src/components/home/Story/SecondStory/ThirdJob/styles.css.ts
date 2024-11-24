@@ -6,5 +6,4 @@ export const container = style({
 
 export const jobContainer = style({
   width: "100%",
-  minHeight: "130px",
 });

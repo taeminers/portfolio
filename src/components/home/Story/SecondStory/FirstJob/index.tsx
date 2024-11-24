@@ -12,7 +12,16 @@ export const FirstJob = () => {
           <Text variant={"body5"} color={"base-lighter"}>
             Grids: Buy Now Pay Later
           </Text>
-          <Text variant={"body6"} color={"base-white"}>
+          <Text
+            variant={"body6"}
+            color={"base-white"}
+            style={{ cursor: "pointer" }}
+            onClick={() =>
+              window.open(
+                "https://drive.google.com/file/d/1bj8roK-gQNuP17X_SWkno6emOfLo5N8Q/view?usp=sharing"
+              )
+            }
+          >
             - Pitch Deck
           </Text>
           <Text variant={"body6"} color={"base-white"}>
