@@ -1,19 +1,33 @@
 import Text from "@/components/core/Text";
 import * as S from "./styles.css";
-import { color } from "@/components/core/Text/styles.css";
 import Image from "next/image";
 import Flex from "@/components/core/Flex";
 import { TimeStamp } from "./TimeStamp";
 import { Space } from "@/components/core/Space";
-
+import * as animationData from "@/utils/lotti/location.json";
 export const SecondStory = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <div className={S.container}>
       <Flex flexDirection="column" gap={20}>
         <Text variant={"body6"} color={"base-white"}>
           Hey, I'm
         </Text>
-        <div className={S.name}>Taemin Lee</div>
+        <Flex justify="between" items={"center"}>
+          <div className={S.name}>Taemin Lee</div>
+          <Flex items={"center"} gap={12}>
+            <Text variant={"body4"} color={"gray-100"}>
+              Seoul, South Korea
+            </Text>
+          </Flex>
+        </Flex>
         <Text variant={"body4"} color={"gray-100"}>
           I'm a software engineer based in Seoul, South Korea. I'm passionate
           about building software products that make a difference. I'm a
@@ -30,7 +44,20 @@ export const SecondStory = () => {
           <Text variant={"heading8"} color={"base-white"}>
             Say Hello
           </Text>
-          <div>{"----->"}</div>
+          <Flex items={"center"} gap={12}>
+            <Image
+              src={"/linkedin.png"}
+              width={32}
+              height={32}
+              alt="linkedin"
+            />
+            <Image
+              src={"/email_blue.png"}
+              width={32}
+              height={32}
+              alt="linkedin"
+            />
+          </Flex>
         </Flex>
       </Flex>
       <TimeStamp />
