@@ -5,6 +5,7 @@ import Flex from "@/components/core/Flex";
 import { TimeStamp } from "./TimeStamp";
 import { Space } from "@/components/core/Space";
 import * as animationData from "@/utils/lotti/location.json";
+import Lottie from "lottie-react";
 export const SecondStory = () => {
   const defaultOptions = {
     loop: true,
@@ -20,23 +21,26 @@ export const SecondStory = () => {
         <Text variant={"body6"} color={"base-white"}>
           Hey, I'm
         </Text>
-        <Flex justify="between" items={"center"}>
+        <Flex items={"flex-start"}>
           <div className={S.name}>Taemin Lee</div>
-          <Flex items={"center"} gap={12}>
+          <Flex items={"center"}>
+            <div className={S.locationLottie}>
+              <Lottie animationData={animationData} loop={true} />
+            </div>
             <Text variant={"body4"} color={"gray-100"}>
               Seoul, South Korea
             </Text>
           </Flex>
         </Flex>
         <Text variant={"body4"} color={"gray-100"}>
-          I'm a software engineer based in Seoul, South Korea. I'm passionate
-          about building software products that make a difference. I'm a
-          software engineer based in Toronto, Canada and also a communication
-          and journalism student. I enjoy creating things that live on the
-          internet, whether that be websites, applications, or anything in
-          between. I have been freelancing for a year now while studying at the
-          university and I've manage to gain a decent amount of experience and
-          valuable knowledge from all different kinds of fields throughout my
+          I'm a software engineer from Seoul, South Korea. I'm passionate about
+          building software products that make a difference. I'm a software
+          engineer based in Toronto, Canada and also a communication and
+          journalism student. I enjoy creating things that live on the internet,
+          whether that be websites, applications, or anything in between. I have
+          been freelancing for a year now while studying at the university and
+          I've manage to gain a decent amount of experience and valuable
+          knowledge from all different kinds of fields throughout my
           projects/work.
         </Text>
         <Space height={20} />
@@ -47,14 +51,14 @@ export const SecondStory = () => {
           <Flex items={"center"} gap={12}>
             <Image
               src={"/linkedin.png"}
-              width={32}
-              height={32}
+              width={24}
+              height={24}
               alt="linkedin"
             />
             <Image
               src={"/email_blue.png"}
-              width={32}
-              height={32}
+              width={24}
+              height={24}
               alt="linkedin"
             />
           </Flex>

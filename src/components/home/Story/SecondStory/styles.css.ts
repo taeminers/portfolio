@@ -18,3 +18,8 @@ export const name = style({
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
 });
+
+export const locationLottie = style({
+  width: "50px",
+  height: "50px",
+});
