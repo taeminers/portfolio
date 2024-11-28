@@ -3,9 +3,5 @@ import * as S from "./styles.css";
 
 export const Logo = () => {
   const router = useRouter();
-  return (
-    <div className={S.container} onClick={() => router.push("/hello")}>
-      Kyle
-    </div>
-  );
+  return <div className={S.container}>Kyle</div>;
 };

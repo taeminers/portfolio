@@ -3,6 +3,7 @@ import { style, keyframes } from "@vanilla-extract/css";
 export const container = style({
   width: "100%",
   padding: "0px 20px",
+  paddingTop: "20px",
   boxSizing: "border-box",
   alignItems: "center",
   position: "fixed",
