@@ -4,6 +4,7 @@ import { FirstStory } from "./FirstStory";
 import { SecondStory } from "./SecondStory";
 import { ThirdStory } from "./ThirdStory";
 import { FourthStory } from "./FourthStory";
+import { Footer } from "@/components/core/Footer";
 
 export const Story = () => {
   return (

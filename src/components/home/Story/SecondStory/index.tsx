@@ -54,12 +54,14 @@ export const SecondStory = () => {
               width={24}
               height={24}
               alt="linkedin"
+              className={S.outlinkButton}
             />
             <Image
               src={"/email_blue.png"}
               width={24}
               height={24}
               alt="linkedin"
+              className={S.outlinkButton}
             />
           </Flex>
         </Flex>

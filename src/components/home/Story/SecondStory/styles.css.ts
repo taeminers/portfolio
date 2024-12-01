@@ -23,3 +23,7 @@ export const locationLottie = style({
   width: "50px",
   height: "50px",
 });
+
+export const outlinkButton = style({
+  cursor: "pointer",
+});
