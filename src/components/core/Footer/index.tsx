@@ -7,7 +7,7 @@ export const Footer = () => {
     <div className={S.container}>
       <div className={S.wrapper}>
         <Flex>
-          <Text variant={"heading1"}>Let's work.</Text>
+          <Text variant={"heading1"}>Let's get to work.</Text>
         </Flex>
       </div>
     </div>

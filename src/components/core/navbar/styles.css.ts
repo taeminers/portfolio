@@ -1,4 +1,5 @@
 import { style, keyframes } from "@vanilla-extract/css";
+import { recipe } from "@vanilla-extract/recipes";
 
 export const container = style({
   width: "100%",
@@ -6,16 +7,11 @@ export const container = style({
   paddingTop: "20px",
   boxSizing: "border-box",
   alignItems: "center",
-  position: "fixed",
-  zIndex: 100,
-  background: "linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 50%)", // Adjusted gradient background
 });
 
 export const opened = style({
-  background: "rgba(255, 255, 255, 0.2)",
   // boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1), 0 0 20px 10px rgba(255, 255, 255, 0.5)", // Add a larger blur radius for the edges
   // backdropFilter: "blur(105px)",
-  height: "200px",
   width: "700px",
   borderRadius: "0 0 1000px 1000px",
 });
@@ -34,4 +30,23 @@ export const scrolledWrapper = style({
   padding: "18px 58px",
 });
 
-export const scrolled = style({});
+export const outerContainer = style({
+  position: "fixed",
+  width: "100%",
+  height: "100%",
+  zIndex: 100,
+});
+
+export const outerBackground = recipe({
+  base: outerContainer,
+  variants: {
+    variant: {
+      true: {
+        background: "rgba(0, 0, 0, 0.5)",
+      },
+      false: {
+        background: "transparent",
+      },
+    },
+  },
+});
