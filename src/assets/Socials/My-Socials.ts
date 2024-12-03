@@ -1,16 +1,16 @@
 export const MySocials = {
   github: {
-    icon: "/assets/Socials/github.svg",
+    icon: "/github.png",
     name: "Github",
     link: "www",
   },
   linkedin: {
-    icon: "/assets/Socials/linkedin.svg",
+    icon: "/linkedin.png",
     name: "Linkedin",
     link: "www",
   },
   cv: {
-    icon: "/assets/Socials/cv.svg",
+    icon: "/resume.png",
     name: "CV",
     link: "www",
   },

@@ -20,11 +20,21 @@ export const Navbar = () => {
                 <motion.div
                   className={S.opened}
                   layout
-                  exit={{ opacity: 0, scale: 1 }}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.95, y: -20 }} // Start slightly above
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    transform: "translateY(20px)",
+                  }} // Move to the original position
+                  exit={{
+                    opacity: 0,
+                    scale: 1,
+                    y: -25,
+                    transform: "translateY(-20px)",
+                  }}
                 >
-                  <OpenedNavbar />
+                  <OpenedNavbar setIsOpen={setIsOpen} />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -36,7 +46,17 @@ export const Navbar = () => {
               setIsOpen((prev) => !prev);
             }}
           >
-            <Logo />
+            <AnimatePresence>
+              {!isOpen && (
+                <motion.div
+                  exit={{
+                    opacity: 0,
+                  }}
+                >
+                  ^
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </Flex>
       </div>

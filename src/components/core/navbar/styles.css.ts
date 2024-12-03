@@ -45,6 +45,7 @@ export const outerBackground = recipe({
         background: "rgba(0, 0, 0, 0.5)",
       },
       false: {
+        height: "20px",
         background: "transparent",
       },
     },

@@ -3,7 +3,13 @@ import Flex from "../../Flex";
 import Text from "../../Text";
 import * as S from "./styles.css";
 import { SocialCard } from "./SocialCard";
-export const OpenedNavbar = () => {
+import { Dispatch, SetStateAction } from "react";
+
+interface OpenedNavbarProps {
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+export const OpenedNavbar = ({ setIsOpen }: OpenedNavbarProps) => {
   return (
     <Flex flexDirection="column" items={"center"} gap={16}>
       <Flex flexDirection="column" items={"center"} gap={12}>
@@ -21,6 +27,13 @@ export const OpenedNavbar = () => {
           <SocialCard key={key} {...value} />
         ))}
       </Flex>
+      <div
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+        }}
+      >
+        x
+      </div>
     </Flex>
   );
 };

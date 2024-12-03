@@ -7,8 +7,8 @@ import { Footer } from "@/components/core/Footer";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <main className={container}>
+        <Navbar />
         <HomePage />
         <Footer />
       </main>
