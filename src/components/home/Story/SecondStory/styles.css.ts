@@ -6,7 +6,6 @@ export const container = style({
   display: "flex",
   flexDirection: "column",
   gap: "120px",
-  borderBottom: "1px solid #2D2D2D",
 });
 
 export const name = style({

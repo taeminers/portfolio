@@ -6,6 +6,8 @@ import { BlogCard } from "../../MediumBlog/BlogCard";
 import { MediumAccount } from "../../MediumBlog/MediumAccount";
 import { MediumPostResponse } from "@/dto/response/MediumPostResponse";
 import { filterNewline } from "@/utils/parse/filterNewline";
+import { Separator } from "@/components/core/Separator";
+import { Space } from "@/components/core/Space";
 
 export const ThirdStory = () => {
   const [mediumPosts, setMediumPosts] = useState<MediumPostResponse>();
@@ -31,12 +33,14 @@ export const ThirdStory = () => {
   // console.log("third story render");
   return (
     <Flex className={S.container} flexDirection="column" gap={50}>
+      <Separator />
+      <Space height={20} />
       <Flex justify="between">
         <Flex flexDirection="column">
-          <Text variant={"heading3"} color={"base-white"}>
+          <Text variant={"body2"} color={"base-white"}>
             How I Think
           </Text>
-          <Text variant={"heading2"} color={"base-white"}>
+          <Text variant={"body5"} color={"base-white"}>
             Dev Blog
           </Text>
         </Flex>
