@@ -8,7 +8,7 @@ export const container = style({
 export const pictureArea = style({
   height: "200px",
   color: "white",
-  background: "black",
+  background: "white",
   outline: "1px dotted gray",
   padding: "16px",
   textAlign: "center",
@@ -25,8 +25,12 @@ export const description = style({
   display: "-webkit-box",
   WebkitBoxOrient: "vertical",
   WebkitLineClamp: 1,
-  fontSize: "11px",
+  fontSize: "13px",
   textOverflow: "ellipsis", // Add text overflow ellipsis
   height: "fit-content",
   color: "white",
+});
+
+export const outlink = style({
+  cursor: "pointer",
 });

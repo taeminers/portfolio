@@ -27,7 +27,7 @@ export const featured = style({
 export const grid = style({
   display: "grid",
   gap: "16px",
-  gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+  gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
   gridAutoRows: "minmax(100px, auto)",
   "@media": {
     "screen and (max-width: 768px)": {

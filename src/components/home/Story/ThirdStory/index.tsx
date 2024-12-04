@@ -34,12 +34,12 @@ export const ThirdStory = () => {
   return (
     <Flex className={S.container} flexDirection="column" gap={50}>
       <Separator />
-      <Space height={20} />
       <Flex justify="between">
         <Flex flexDirection="column">
           <Text variant={"body2"} color={"base-white"}>
             How I Think
           </Text>
+          <Space height={12} />
           <Text variant={"body5"} color={"base-white"}>
             Dev Blog
           </Text>
@@ -55,6 +55,7 @@ export const ThirdStory = () => {
             description={filterNewline(post.description)}
             date={post.pubDate}
             link={post.link}
+            categories={post.categories}
           />
         ))}
       </div>
