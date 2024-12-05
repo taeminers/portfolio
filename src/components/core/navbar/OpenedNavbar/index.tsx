@@ -11,29 +11,29 @@ import { Space } from "../../Space";
 export const OpenedNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <AnimatePresence>
-      <Flex
-        flexDirection="column"
-        items={"center"}
-        gap={16}
-        className={S.outerBackground({ variant: isOpen })}
-      >
+    <Flex
+      flexDirection="column"
+      items={"center"}
+      gap={16}
+      className={S.outerBackground({ variant: isOpen })}
+    >
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             className={S.opened}
             layout
-            initial={{ opacity: 0, scale: 0.95, y: -20 }} // Start slightly above
+            initial={{ opacity: 0, scale: 0.95, y: -100 }} // Start slightly above
             animate={{
               opacity: 1,
               scale: 1,
               y: 0,
-              transition: { duration: 0.3 }, // Set the duration of the animation
+              transition: { duration: 0.4 }, // Set the duration of the animation
             }} // Move to the original position
             exit={{
-              opacity: 1,
+              opacity: 0,
               scale: 1,
-              y: -25,
-              transition: { duration: 0.5 }, // Set the duration of the animation
+              y: -100,
+              transition: { duration: 0.4 }, // Set the duration of the animation
             }}
           >
             <Flex flexDirection="column" items={"center"} gap={12}>
@@ -57,29 +57,44 @@ export const OpenedNavbar = () => {
             </Flex>
           </motion.div>
         )}
-        <motion.div
-          key="toggleButton"
-          onClick={() => {
-            setIsOpen((prev) => !prev);
-          }}
-          layout
-          initial={{ opacity: 0, scale: 0.95, y: -20 }} // Start slightly above
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            transition: { duration: 0.1 }, // Set the duration of the animation
-          }} // Move to the original position
-          exit={{
-            opacity: 0,
-            scale: 1,
-            y: -25,
-            transition: { duration: 0.1 }, // Set the duration of the exit animation
-          }}
-        >
-          {isOpen ? <Space height={16} /> : null}x
-        </motion.div>
-      </Flex>
-    </AnimatePresence>
+      </AnimatePresence>
+      <AnimatePresence>
+        {isOpen ? (
+          <motion.div
+            key="toggleButton"
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+            }}
+            layout
+            initial={{ opacity: 0, scale: 1, y: -100 }} // Start above the final position
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: 0,
+              transition: { duration: 0.4 }, // Set the duration of the animation
+            }} // Move to the original position
+          >
+            X
+          </motion.div>
+        ) : (
+          <motion.div
+            key="toggleButtons"
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+            }}
+            layout
+            initial={{ opacity: 0, scale: 1, y: 0 }} // Start below the final position
+            animate={{
+              opacity: [0, 0, 1],
+              scale: 1,
+              y: 0, // Keyframes for the y property
+              transition: { duration: 1, times: [0, 0.6, 1] }, // Set the duration and keyframe times
+            }} // Move to the original position
+          >
+            ^
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </Flex>
   );
 };
