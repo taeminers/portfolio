@@ -1,12 +1,12 @@
 "use client";
 import { MySocials } from "@/assets/Socials/My-Socials";
-import Flex from "../../Flex";
-import Text from "../../Text";
+import Flex from "../Flex";
+import Text from "../Text";
 import * as S from "./styles.css";
 import { SocialCard } from "./SocialCard";
 import { Dispatch, SetStateAction, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Space } from "../../Space";
+import { Space } from "../Space";
 
 export const OpenedNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
