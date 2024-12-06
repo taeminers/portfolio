@@ -7,6 +7,7 @@ import { FirstJob } from "../FirstJob";
 import { SecondJob } from "../SecondJob";
 import { ThirdJob } from "../ThirdJob";
 import { FourthJob } from "../FourthJob";
+import { Carousel } from "@/components/core/Carousel";
 export const TimeStamp = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const years = [2021, 2022, 2023, 2024];

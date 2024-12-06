@@ -6,6 +6,7 @@ import { TimeStamp } from "./TimeStamp";
 import { Space } from "@/components/core/Space";
 import * as animationData from "@/utils/lotti/location.json";
 import Lottie from "lottie-react";
+import { Carousel } from "@/components/core/Carousel";
 export const SecondStory = () => {
   const defaultOptions = {
     loop: true,
@@ -66,6 +67,10 @@ export const SecondStory = () => {
           </Flex>
         </Flex>
       </Flex>
+      <Text variant={"heading2"} color={"gray-200"}>
+        My Life in Pictures
+      </Text>
+      <Carousel></Carousel>
       <TimeStamp />
     </div>
   );
