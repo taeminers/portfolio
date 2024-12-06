@@ -12,7 +12,7 @@ export const TimeStamp = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const years = [2021, 2022, 2023, 2024];
   return (
-    <Flex flexDirection="column" gap={12}>
+    <Flex flexDirection="column" gap={12} className={S.container}>
       <Text color={"gray-100"}>TimeStamp</Text>
       <Flex justify="between">
         {years.map((year, index) => (

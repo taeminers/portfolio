@@ -7,6 +7,7 @@ import { Space } from "@/components/core/Space";
 import * as animationData from "@/utils/lotti/location.json";
 import Lottie from "lottie-react";
 import { Carousel } from "@/components/core/Carousel";
+import { CarouselCard } from "../../CarouselCard";
 export const SecondStory = () => {
   const defaultOptions = {
     loop: true,
@@ -33,7 +34,11 @@ export const SecondStory = () => {
             </Text>
           </Flex>
         </Flex>
-        <Text variant={"body4"} color={"gray-100"}>
+        <Text
+          variant={"body4"}
+          color={"gray-100"}
+          style={{ lineHeight: "150%" }}
+        >
           I'm a software engineer from Seoul, South Korea. I'm passionate about
           building software products that make a difference. I'm a software
           engineer based in Toronto, Canada and also a communication and
@@ -67,11 +72,10 @@ export const SecondStory = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Text variant={"heading2"} color={"gray-200"}>
-        My Life in Pictures
-      </Text>
-      <Carousel></Carousel>
-      <TimeStamp />
+      <Carousel>
+        <CarouselCard content={"First card"} />
+        <CarouselCard content={"Second card"} />
+      </Carousel>
     </div>
   );
 };

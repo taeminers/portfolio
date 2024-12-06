@@ -176,7 +176,6 @@ export const textVariant = {
 const text = recipe({
   base: {
     color: color["gray-800"].color,
-    lineHeight: "150%",
   },
   variants: {
     variant: textVariant,
