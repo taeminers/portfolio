@@ -2,7 +2,7 @@ export const MySocials = {
   github: {
     icon: "/github.png",
     name: "Github",
-    link: "www",
+    link: "https://github.com/taeminers/",
   },
   linkedin: {
     icon: "/linkedin.png",
