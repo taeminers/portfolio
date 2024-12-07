@@ -61,6 +61,7 @@ export const SecondStory = () => {
               height={24}
               alt="linkedin"
               className={S.outlinkButton}
+              onClick={() => {}}
             />
             <Image
               src={"/email_blue.png"}
@@ -68,6 +69,7 @@ export const SecondStory = () => {
               height={24}
               alt="linkedin"
               className={S.outlinkButton}
+              onClick={() => {}}
             />
           </Flex>
         </Flex>
