@@ -7,14 +7,14 @@ export const FourthStory = () => {
   return (
     <Flex className={S.container} gap={50} flexDirection="column">
       <Text variant={"body2"} color={"base-white"}>
-        My Current Interests
+        Goals, Vision, and Dream
       </Text>
       <Carousel>
-        <CarouselCard content={"First card"} />
-        <CarouselCard content={"Second card"} />
-        <CarouselCard content={"Third card"} />
-        <CarouselCard content={"Foiurthg card"} />
-        <CarouselCard content={"Fifth card"} />
+        <CarouselCard content={"Become better at React"} />
+        <CarouselCard content={"Excel at Leetcode"} />
+        <CarouselCard content={"Expand my vision through books"} />
+        <CarouselCard content={"Learn, Build, Grow"} />
+        <CarouselCard content={"KAIST masters"} />
       </Carousel>
     </Flex>
   );

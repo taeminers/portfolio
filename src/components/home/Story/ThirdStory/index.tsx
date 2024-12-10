@@ -30,7 +30,6 @@ export const ThirdStory = () => {
     };
     fetchData();
   }, []);
-  // console.log("third story render");
   return (
     <Flex className={S.container} flexDirection="column" gap={50}>
       <Separator />
