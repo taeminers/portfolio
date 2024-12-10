@@ -74,10 +74,6 @@ export const SecondStory = () => {
           </Flex>
         </Flex>
       </Flex>
-      <Carousel>
-        <CarouselCard content={"First card"} />
-        <CarouselCard content={"Second card"} />
-      </Carousel>
     </div>
   );
 };
