@@ -7,6 +7,8 @@ import { SocialCard } from "./SocialCard";
 import { Dispatch, SetStateAction, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Space } from "../Space";
+import { IcChevronDown } from "@/icons/IcChevronDown";
+import { IcChevronUp } from "@/icons/IcChevronUp";
 
 export const OpenedNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,7 +76,7 @@ export const OpenedNavbar = () => {
               transition: { duration: 0.4 }, // Set the duration of the animation
             }} // Move to the original position
           >
-            X
+            <IcChevronUp />
           </motion.div>
         ) : (
           <motion.div
@@ -91,7 +93,7 @@ export const OpenedNavbar = () => {
               transition: { duration: 1, times: [0, 0.6, 1] }, // Set the duration and keyframe times
             }} // Move to the original position
           >
-            ^
+            <IcChevronDown />
           </motion.div>
         )}
       </AnimatePresence>
