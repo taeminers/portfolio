@@ -3,7 +3,7 @@ import Text from "@/components/core/Text";
 import * as S from "./styles.css";
 export const SecondJob = () => {
   return (
-    <Flex justify="between">
+    <Flex justify="center" flexDirection="column">
       <Flex flexDirection="column" gap={12}>
         <Text variant={"heading6"} color={"base-lighter"}>
           Startup CEO

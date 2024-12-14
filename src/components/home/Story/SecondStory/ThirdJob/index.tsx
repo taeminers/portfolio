@@ -5,7 +5,7 @@ import * as S from "./styles.css";
 export const ThirdJob = () => {
   return (
     <Flex justify="between" gap={32}>
-      <Flex className={S.jobContainer} justify="between">
+      <Flex className={S.jobContainer} justify="center" flexDirection="column">
         <Flex flexDirection="column" gap={12}>
           <Text variant={"heading6"} color={"base-lighter"}>
             Software Developer
@@ -28,7 +28,7 @@ export const ThirdJob = () => {
           Jun 2023 - Aug 2023
         </Text>
       </Flex>
-      <Flex className={S.jobContainer} justify="between">
+      <Flex className={S.jobContainer} justify="center" flexDirection="column">
         <Flex flexDirection="column" gap={12}>
           <Text variant={"heading6"} color={"base-lighter"}>
             Software Developer
