@@ -8,7 +8,7 @@ export const Carousel = ({ children }: { children: React.ReactNode }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
     lazyLoad: true,
     swipeToSlider: true,

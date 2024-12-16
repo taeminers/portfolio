@@ -15,7 +15,7 @@ export const FourthJob = () => {
               FACTBLOCK: Frontend Developer
             </Text>
             <Text variant={"body6"} color={"base-white"}>
-              - Pitch Deck
+              - Fablo App
             </Text>
             <Text variant={"body6"} color={"base-white"}>
               - Learnings

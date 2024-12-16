@@ -6,6 +6,7 @@ export const container = style({
   color: "black",
   padding: "40px 60px",
   overflow: "hidden",
+  marginBottom: "120px",
 });
 
 export const contentWrapper = style({

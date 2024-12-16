@@ -5,6 +5,7 @@ import { SecondStory } from "./SecondStory";
 import { ThirdStory } from "./ThirdStory";
 import { FourthStory } from "./FourthStory";
 import { TimeStamp } from "./SecondStory/TimeStamp";
+import Flex from "@/components/core/Flex";
 
 export const Story = () => {
   return (
