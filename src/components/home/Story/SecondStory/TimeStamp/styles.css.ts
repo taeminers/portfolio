@@ -28,4 +28,9 @@ export const tab = recipe({
 
 export const detailSection = style({
   marginTop: "28px",
+  overflowX: "scroll",
+  scrollbarColor: "lightgrey transparent",
+  scrollbarGutter: "stable",
+  scrollbarWidth: "thin",
+  paddingBottom: "28px", // Add padding to create space between content and scrollbar
 });

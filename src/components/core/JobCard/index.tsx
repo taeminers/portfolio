@@ -19,26 +19,18 @@ export const JobCard = ({
 }: JobCardProps) => {
   return (
     <Flex className={S.container} flexDirection="column" gap={12}>
-      <Flex className={S.mainContentWrapper} flexDirection="column" gap={12}>
+      <Flex className={S.mainContentWrapper} flexDirection="column" gap={20}>
         <Flex className={S.imageWrapper} items="center" justify="center">
-          <Image
-            src={"/grids_logo_white.jpg"}
-            width={100}
-            height={100}
-            alt="job"
-          />
+          <Image src={image_url} width={100} height={100} alt="job" />
         </Flex>
-        <Flex flexDirection="column" gap={8}>
-          <Text>Title</Text>
-          <Text>companyname</Text>
-          <Text>
-            Job description Lorem ipsum dolor sit amet consectetur adipisicing
-            elit.
-          </Text>
+        <Flex flexDirection="column" gap={12}>
+          <Text variant={"body2"}>{job_title}</Text>
+          <Text variant={"body4"}>{company_name}</Text>
+          <Text variant={"body6"}>{job_description}</Text>
         </Flex>
       </Flex>
       <Flex className={S.bottomSection} items="center" justify="center">
-        asdf
+        {duration}
       </Flex>
     </Flex>
   );

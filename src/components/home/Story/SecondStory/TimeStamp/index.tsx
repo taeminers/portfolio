@@ -8,6 +8,8 @@ import { SecondJob } from "../SecondJob";
 import { ThirdJob } from "../ThirdJob";
 import { FourthJob } from "../FourthJob";
 import { Carousel } from "@/components/core/Carousel";
+import { MyJobs } from "@/assets/Job/My-Jobs";
+import { JobCard } from "@/components/core/JobCard";
 export const TimeStamp = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const years = [2021, 2022, 2023, 2024];
@@ -29,10 +31,9 @@ export const TimeStamp = () => {
         ))}
       </Flex>
       <Flex className={S.detailSection} gap={20}>
-        <FirstJob />
-        <SecondJob />
-        <ThirdJob />
-        <FourthJob />
+        {Object.entries(MyJobs).map(([key, value]) => (
+          <JobCard key={key} {...value} />
+        ))}
       </Flex>
     </Flex>
   );
