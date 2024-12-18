@@ -4,7 +4,7 @@ import * as S from "./styles.css";
 import Image from "next/image";
 export const FourthJob = () => {
   return (
-    <Flex justify="center" flexDirection="column">
+    <Flex justify="center" flexDirection="column" className={S.cardWrapper}>
       <Flex gap={32}>
         <Flex flexDirection="column" gap={12}>
           <Text variant={"heading6"} color={"base-lighter"}>

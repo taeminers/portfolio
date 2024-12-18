@@ -4,7 +4,7 @@ import * as S from "./styles.css";
 import Image from "next/image";
 export const ThirdJob = () => {
   return (
-    <Flex justify="between" gap={32}>
+    <>
       <Flex className={S.jobContainer} justify="center" flexDirection="column">
         <Flex gap={32}>
           <Flex flexDirection="column" gap={12}>
@@ -17,10 +17,10 @@ export const ThirdJob = () => {
                   LG CNS: Intern
                 </Text>
                 <Text variant={"body6"} color={"base-white"}>
-                  - Turning React Project into NextJS
+                  - Mobile Service Development team
                 </Text>
                 <Text variant={"body6"} color={"base-white"}>
-                  - Learnings
+                  - Turning React Project into NextJS
                 </Text>
               </Flex>
             </Flex>
@@ -58,6 +58,6 @@ export const ThirdJob = () => {
           Aug 2023 - Dec 2023
         </Text>
       </Flex>
-    </Flex>
+    </>
   );
 };

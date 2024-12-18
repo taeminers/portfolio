@@ -4,8 +4,14 @@ import * as S from "./styles.css";
 import Image from "next/image";
 export const SecondJob = () => {
   return (
-    <Flex justify="center" flexDirection="column">
-      <Flex gap={32}>
+    <Flex items="center" flexDirection="column" className={S.cardWrapper}>
+      <Flex gap={8} flexDirection="column" items="center">
+        <Image
+          src={"/grids_logo_white.jpg"}
+          width={50}
+          height={50}
+          alt="grids"
+        />
         <Flex flexDirection="column" gap={12}>
           <Text variant={"heading6"} color={"base-lighter"}>
             Startup CEO
@@ -36,12 +42,6 @@ export const SecondJob = () => {
             </Text>
           </Flex>
         </Flex>
-        <Image
-          src={"/grids_logo_white.jpg"}
-          width={50}
-          height={50}
-          alt="grids"
-        />
       </Flex>
       <Text variant={"body6"} color={"base-lighter"}>
         Nov 2021 - Mar 2022

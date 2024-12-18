@@ -12,6 +12,7 @@ export const Carousel = ({ children }: { children: React.ReactNode }) => {
     slidesToScroll: 1,
     lazyLoad: true,
     swipeToSlider: true,
+    gap: 200,
   };
   return (
     <div className="slider-container">

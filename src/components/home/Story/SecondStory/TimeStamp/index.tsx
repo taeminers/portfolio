@@ -28,16 +28,12 @@ export const TimeStamp = () => {
           </div>
         ))}
       </Flex>
-      <div className={S.detailSection}>
-        {match(selectedTab)
-          .with(0, () => <FirstJob />)
-          .with(1, () => <SecondJob />)
-          .with(2, () => <ThirdJob />)
-          .with(3, () => <FourthJob />)
-          .otherwise(() => (
-            <></>
-          ))}
-      </div>
+      <Flex className={S.detailSection} gap={20}>
+        <FirstJob />
+        <SecondJob />
+        <ThirdJob />
+        <FourthJob />
+      </Flex>
     </Flex>
   );
 };

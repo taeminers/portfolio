@@ -2,10 +2,17 @@ import Flex from "@/components/core/Flex";
 import Text from "@/components/core/Text";
 import * as S from "./styles.css";
 import Image from "next/image";
+import { JobCard } from "@/components/core/JobCard";
 export const FirstJob = () => {
   return (
-    <Flex justify="center" flexDirection="column">
-      <Flex gap={32}>
+    <Flex items="center" flexDirection="column" className={S.cardWrapper}>
+      <Flex gap={8} flexDirection="column" items="center">
+        <Image
+          src={"/grids_logo_white.jpg"}
+          width={50}
+          height={50}
+          alt="grids"
+        />
         <Flex flexDirection="column" gap={12}>
           <Text variant={"heading6"} color={"base-lighter"}>
             Startup CEO
@@ -36,14 +43,7 @@ export const FirstJob = () => {
             </Text>
           </Flex>
         </Flex>
-        <Image
-          src={"/grids_logo_white.jpg"}
-          width={50}
-          height={50}
-          alt="grids"
-        />
       </Flex>
-
       <Text variant={"body6"} color={"base-lighter"}>
         Mar 2021 - Oct 2021
       </Text>

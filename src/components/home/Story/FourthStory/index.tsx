@@ -21,19 +21,14 @@ export const FourthStory = () => {
         </CarouselCard>
         <CarouselCard content={"Excel at Leetcode"}>
           <Image
-            src={"/reactjs_nextjs.png"}
-            width={200}
+            src={"/leetcode_logo.png"}
+            width={100}
             height={100}
             alt="nextjs"
           />
         </CarouselCard>
-        <CarouselCard content={"Expand my vision through books"}>
-          <Image
-            src={"/reactjs_nextjs.png"}
-            width={200}
-            height={100}
-            alt="nextjs"
-          />
+        <CarouselCard content={"Read, and expand my vision"}>
+          <Image src={"/brain.avif"} width={150} height={100} alt="nextjs" />
         </CarouselCard>
         <CarouselCard content={"Learn, Build, Grow"}>
           <Image

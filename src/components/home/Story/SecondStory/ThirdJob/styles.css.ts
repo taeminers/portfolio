@@ -7,3 +7,7 @@ export const container = style({
 export const jobContainer = style({
   width: "100%",
 });
+
+export const cardWrapper = style({
+  width: "100%",
+});
