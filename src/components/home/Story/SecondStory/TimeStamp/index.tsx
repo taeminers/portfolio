@@ -2,12 +2,6 @@ import Text from "@/components/core/Text";
 import Flex from "@/components/core/Flex";
 import * as S from "./styles.css";
 import { useState } from "react";
-import { match } from "ts-pattern";
-import { FirstJob } from "../FirstJob";
-import { SecondJob } from "../SecondJob";
-import { ThirdJob } from "../ThirdJob";
-import { FourthJob } from "../FourthJob";
-import { Carousel } from "@/components/core/Carousel";
 import { MyJobs } from "@/assets/Job/My-Jobs";
 import { JobCard } from "@/components/core/JobCard";
 export const TimeStamp = () => {
@@ -31,6 +25,7 @@ export const TimeStamp = () => {
         ))}
       </Flex>
       <Flex className={S.detailSection} gap={20}>
+        {/* need to highlight card when year selected */}
         {Object.entries(MyJobs).map(([key, value]) => (
           <JobCard key={key} {...value} />
         ))}
