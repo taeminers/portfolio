@@ -7,7 +7,7 @@ export const DescriptionLoop = () => {
     "Creative",
     "Innovative",
     "a Dreamer",
-    'Ready to Grow"',
+    "Ready to Grow",
   ];
 
   const [descriptionArray, setDescriptionArray] = useState(initialArray);
