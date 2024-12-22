@@ -1,3 +1,4 @@
+"use client";
 import Flex from "@/components/core/Flex";
 import Text from "@/components/core/Text";
 import * as S from "./styles.css";

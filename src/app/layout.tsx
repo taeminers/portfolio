@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/core/Cursor";
 
 const ubuntu = Ubuntu({
   weight: ["400", "700"],

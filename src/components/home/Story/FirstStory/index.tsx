@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import * as S from "./styles.css";
 import { DescriptionLoop } from "./DescriptionLoop";

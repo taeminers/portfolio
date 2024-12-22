@@ -1,13 +1,12 @@
+"use client";
 import Text from "@/components/core/Text";
 import * as S from "./styles.css";
 import Image from "next/image";
 import Flex from "@/components/core/Flex";
-import { TimeStamp } from "./TimeStamp";
 import { Space } from "@/components/core/Space";
 import * as animationData from "@/utils/lotti/location.json";
 import Lottie from "lottie-react";
-import { Carousel } from "@/components/core/Carousel";
-import { CarouselCard } from "../../CarouselCard";
+
 export const SecondStory = () => {
   const defaultOptions = {
     loop: true,
@@ -17,6 +16,7 @@ export const SecondStory = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
   return (
     <div className={S.container}>
       <Flex flexDirection="column" gap={20}>

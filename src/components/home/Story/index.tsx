@@ -1,12 +1,17 @@
 "use client";
 import React, { Suspense } from "react";
 import { FirstStory } from "./FirstStory";
-import { SecondStory } from "./SecondStory";
 import { ThirdStory } from "./ThirdStory";
 import { FourthStory } from "./FourthStory";
 import { TimeStamp } from "./SecondStory/TimeStamp";
-import Flex from "@/components/core/Flex";
+import dynamic from "next/dynamic";
 
+const SecondStory = dynamic(
+  () => import("./SecondStory").then((mod) => mod.SecondStory),
+  {
+    ssr: false,
+  }
+);
 export const Story = () => {
   return (
     <>
