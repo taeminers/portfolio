@@ -8,6 +8,8 @@ interface JobCardProps {
   company_name: string;
   job_description: string;
   duration: string;
+  selected?: boolean;
+  year: number;
 }
 
 export const JobCard = ({
@@ -16,21 +18,29 @@ export const JobCard = ({
   company_name,
   job_description,
   duration,
+  selected = false,
 }: JobCardProps) => {
   return (
-    <Flex className={S.container} flexDirection="column" gap={12}>
+    <Flex
+      className={S.container({ selected })}
+      flexDirection="column"
+      justify="between"
+    >
       <Flex className={S.mainContentWrapper} flexDirection="column" gap={20}>
-        <Flex className={S.imageWrapper} items="center" justify="center">
-          <Image src={image_url} width={100} height={100} alt="job" />
-        </Flex>
         <Flex flexDirection="column" gap={12}>
           <Text variant={"body2"}>{job_title}</Text>
-          <Text variant={"body4"}>{company_name}</Text>
           <Text variant={"body6"}>{job_description}</Text>
         </Flex>
       </Flex>
-      <Flex className={S.bottomSection} items="center" justify="center">
-        {duration}
+      <Flex className={S.bottomSection} items="center" gap={12}>
+        <Image
+          className={S.imageWrapper}
+          src={image_url}
+          width={50}
+          height={50}
+          alt="job"
+        />
+        <Text variant={"body4"}>{company_name}</Text>
       </Flex>
     </Flex>
   );

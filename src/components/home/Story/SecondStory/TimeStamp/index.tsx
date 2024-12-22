@@ -27,7 +27,11 @@ export const TimeStamp = () => {
       <Flex className={S.detailSection} gap={20}>
         {/* need to highlight card when year selected */}
         {Object.entries(MyJobs).map(([key, value]) => (
-          <JobCard key={key} {...value} />
+          <JobCard
+            key={key}
+            {...value}
+            selected={years[selectedTab] === value.year}
+          />
         ))}
       </Flex>
     </Flex>

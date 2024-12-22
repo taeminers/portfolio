@@ -12,7 +12,8 @@ export const name = style({
   fontSize: "100px",
   fontWeight: 600,
   width: "fit-content",
-  background: "linear-gradient(90deg, #28313B 0%, #485461 50% , #ffffff 100%)", // Corrected color codes
+  background:
+    "linear-gradient(90deg, rgba(57,45,232,1) 0%, rgba(109,109,244,1) 35%, rgba(0,212,255,1) 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",

@@ -1,28 +1,39 @@
 import { style } from "@vanilla-extract/css";
+import { recipe } from "@vanilla-extract/recipes";
 
-export const container = style({
-  background: "white",
-  borderRadius: "8px",
-  width: "300px",
-  flexShrink: 0,
+export const container = recipe({
+  base: {
+    borderRadius: "8px",
+    width: "300px",
+    flexShrink: 0,
+    background: "white",
+    height: "250px",
+  },
+  variants: {
+    selected: {
+      true: {},
+      false: {},
+    },
+  },
+  defaultVariants: {
+    selected: false,
+  },
 });
 
 export const mainContentWrapper = style({
-  padding: "12px 16px 0px 16px",
-  marginBottom: "10px",
+  margin: "12px",
+  padding: "16px",
+  height: "100%",
+  background: "pink",
 });
 
 export const imageWrapper = style({
-  width: "100%",
-  padding: "16px",
-  background: "black",
-  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-  // borderRadius: "8px",
+  borderRadius: "100%",
 });
 
 export const bottomSection = style({
-  borderRadius: "0 0 8px 8px",
-  padding: "16px",
-  background: "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, grey 100%)",
+  padding: "6px 16px",
+  background: "white",
   width: "100%",
+  borderRadius: "0 0 8px 8px",
 });
