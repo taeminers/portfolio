@@ -8,6 +8,7 @@ interface JobCardProps {
   company_name: string;
   job_description: string;
   duration: string;
+  chip: string[];
   selected?: boolean;
   year: number;
 }
@@ -17,31 +18,51 @@ export const JobCard = ({
   job_title,
   company_name,
   job_description,
+  chip,
   duration,
   selected = false,
 }: JobCardProps) => {
   return (
-    <Flex
-      className={S.container({ selected })}
-      flexDirection="column"
-      justify="between"
-    >
-      <Flex className={S.mainContentWrapper} flexDirection="column" gap={20}>
-        <Flex flexDirection="column" gap={12}>
-          <Text variant={"body2"}>{job_title}</Text>
-          <Text variant={"body6"}>{job_description}</Text>
+    <Flex className={S.container({ selected })} flexDirection="column" gap={20}>
+      <Flex className={S.topSection} justify="between" items={"center"}>
+        <Flex justify="center" items="center" className={S.logoWrapper}>
+          <Image
+            className={S.companyLogo}
+            src={image_url}
+            width={30}
+            height={30}
+            alt={job_title}
+          />
+        </Flex>
+        <Flex items={"center"} gap={4} className={S.linkWrapper}>
+          <Text
+            variant={"label1"}
+            color={"gray-500"}
+            style={{ fontWeight: "200" }}
+          >
+            link
+          </Text>
+          <Image src={"/outlink.png"} width={15} height={15} alt="outlink" />
         </Flex>
       </Flex>
-      <Flex className={S.bottomSection} items="center" gap={12}>
-        <Image
-          className={S.imageWrapper}
-          src={image_url}
-          width={50}
-          height={50}
-          alt="job"
-        />
-        <Text variant={"body4"}>{company_name}</Text>
+      <Flex flexDirection="column" gap={12}>
+        <Flex items={"center"} gap={6}>
+          <Text variant={"heading9"}>{company_name}</Text>
+          <div className={S.duration}>{duration}</div>
+        </Flex>
+        <Text variant={"heading6"}>{job_title}</Text>
+        <Flex items={"center"} gap={4}>
+          {chip.map((content) => (
+            <Flex className={S.chip}>{content}</Flex>
+          ))}
+        </Flex>
       </Flex>
+      <div>
+        <div className={S.separator} />
+        <Flex>
+          <Text variant={"body6"}>{job_description}</Text>
+        </Flex>
+      </div>
     </Flex>
   );
 };

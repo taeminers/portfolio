@@ -7,11 +7,14 @@ export const container = recipe({
     width: "300px",
     flexShrink: 0,
     background: "white",
-    height: "250px",
+    padding: "20px",
   },
   variants: {
     selected: {
-      true: {},
+      true: {
+        // background: "rgba(97, 93, 240, 0.8)",
+        background: "white",
+      },
       false: {},
     },
   },
@@ -20,20 +23,44 @@ export const container = recipe({
   },
 });
 
-export const mainContentWrapper = style({
-  margin: "12px",
-  padding: "16px",
-  height: "100%",
-  background: "pink",
+export const topSection = style({
+  width: "100%",
 });
 
-export const imageWrapper = style({
+export const linkWrapper = style({
+  border: "1px solid lightgrey",
+  padding: "4px 8px",
+  borderRadius: "8px",
+});
+
+export const logoWrapper = style({
+  outline: "1px solid lightgrey",
+  borderRadius: "100%",
+  padding: "6px",
+});
+
+export const companyLogo = style({
   borderRadius: "100%",
 });
 
-export const bottomSection = style({
-  padding: "6px 16px",
-  background: "white",
+export const chip = style({
+  background: "lightgrey",
+  color: "black",
+  fontSize: "12px",
+  padding: "8px",
+  borderRadius: "4px",
+});
+
+export const separator = style({
   width: "100%",
-  borderRadius: "0 0 8px 8px",
+  height: "1px",
+  background: "lightgrey",
+  marginTop: "20px",
+  marginBottom: "10px",
+});
+
+export const duration = style({
+  fontSize: "10px",
+  color: "black",
+  fontWeight: "200",
 });
