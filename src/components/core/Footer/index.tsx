@@ -6,8 +6,9 @@ export const Footer = () => {
   return (
     <div className={S.container}>
       <div className={S.wrapper}>
-        <Flex>
-          <Text variant={"heading1"}>Let's get to work.</Text>
+        <Flex justify="between">
+          <Text variant={"heading1"}>Let's get to work </Text>
+          <Text>This website is in Progress</Text>
         </Flex>
       </div>
     </div>

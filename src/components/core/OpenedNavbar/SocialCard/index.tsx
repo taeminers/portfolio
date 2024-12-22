@@ -12,7 +12,7 @@ interface SocialCardProps {
 export const SocialCard = ({ icon, name, link }: SocialCardProps) => {
   return (
     <Flex
-      onClick={() => (window.location.href = link)}
+      onClick={() => window.open(link, "_blank")}
       items={"center"}
       className={S.container}
       gap={4}

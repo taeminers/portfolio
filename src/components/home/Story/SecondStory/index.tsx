@@ -40,14 +40,10 @@ export const SecondStory = () => {
           style={{ lineHeight: "150%" }}
         >
           I'm a software engineer from Seoul, South Korea. I'm passionate about
-          building software products that make a difference. I'm a software
-          engineer based in Toronto, Canada and also a communication and
-          journalism student. I enjoy creating things that live on the internet,
-          whether that be websites, applications, or anything in between. I have
-          been freelancing for a year now while studying at the university and
-          I've manage to gain a decent amount of experience and valuable
-          knowledge from all different kinds of fields throughout my
-          projects/work.
+          building software products that make a difference. I'm currently open
+          for new opportunities and positions. Backend, Frontend, Mobile
+          developement, you name it. I'm ready to take on new challenges either
+          in Korea, or abroad so feel free to reach out to me.
         </Text>
         <Space height={20} />
         <Flex gap={10} items={"center"}>

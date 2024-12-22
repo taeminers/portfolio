@@ -7,11 +7,11 @@ export const MySocials = {
   linkedin: {
     icon: "/linkedin.png",
     name: "Linkedin",
-    link: "www",
+    link: "https://www.linkedin.com/in/%ED%83%9C%EB%AF%BC-%EC%9D%B4-5086ba216/",
   },
   cv: {
     icon: "/resume.png",
-    name: "CV",
-    link: "www",
+    name: "CV Not Ready",
+    link: "/",
   },
 };
