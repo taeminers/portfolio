@@ -11,6 +11,7 @@ interface JobCardProps {
   chip: string[];
   selected?: boolean;
   year: number;
+  link: string;
 }
 
 export const JobCard = ({
@@ -20,6 +21,7 @@ export const JobCard = ({
   job_description,
   chip,
   duration,
+  link,
   selected = false,
 }: JobCardProps) => {
   return (
@@ -34,7 +36,12 @@ export const JobCard = ({
             alt={job_title}
           />
         </Flex>
-        <Flex items={"center"} gap={4} className={S.linkWrapper}>
+        <Flex
+          items={"center"}
+          gap={4}
+          className={S.linkWrapper}
+          onClick={() => window.open(link)}
+        >
           <Text
             variant={"label1"}
             color={"gray-500"}
