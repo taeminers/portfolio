@@ -8,14 +8,13 @@ export const container = recipe({
     flexShrink: 0,
     background: "white",
     padding: "20px",
+    scale: 0.95,
   },
   variants: {
     selected: {
       true: {
-        // background: "rgba(97, 93, 240, 0.8)",
-        background: "white",
+        scale: 1,
       },
-      false: {},
     },
   },
   defaultVariants: {
@@ -31,6 +30,12 @@ export const linkWrapper = style({
   border: "1px solid lightgrey",
   padding: "4px 8px",
   borderRadius: "8px",
+  cursor: "pointer",
+  transition: "box-shadow 300ms ease-in-out, color 300ms ease-in-out",
+  ":hover": {
+    boxShadow: "0 0 40px 40px black inset",
+    color: "white",
+  },
 });
 
 export const logoWrapper = style({

@@ -7,6 +7,7 @@ export const MyJobs = {
     chip: ["Start up", "First Job"],
     duration: "7 Months",
     year: 2021,
+    link: "https://drive.google.com/file/d/1bj8roK-gQNuP17X_SWkno6emOfLo5N8Q/view?usp=sharing",
   },
   secondJob: {
     image_url: "/grids_logo_white.jpg",
@@ -16,6 +17,7 @@ export const MyJobs = {
     job_description: "Short Form News Platform",
     duration: "5 Months",
     year: 2022,
+    link: "https://drive.google.com/file/d/1DeaR1ZQtBqy1MFP5HWhuaMbigxeZtfWL/view?usp=sharing",
   },
   thirdJob: {
     image_url: "/cns_logo.png",
@@ -25,6 +27,7 @@ export const MyJobs = {
     job_description: "Mobile Service Development team",
     duration: "3 Months",
     year: 2023,
+    link: "https://drive.google.com/file/d/15QOpgaJ4K8PYe4rvGwVDG7x04L2cXMt4/view?usp=drive_link",
   },
   fourthJob: {
     image_url: "/bondit_logo.png",
@@ -34,6 +37,7 @@ export const MyJobs = {
     job_description: "College Community Calendar",
     duration: "4 Months",
     year: 2023,
+    link: "https://www.bondit.io/",
   },
   fifthJob: {
     image_url: "/factblock_logo.jpg",
@@ -43,5 +47,6 @@ export const MyJobs = {
     job_description: "Fablo App",
     duration: "Feb 2024 - current",
     year: 2024,
+    link: "https://www.playfablo.com/",
   },
 };
