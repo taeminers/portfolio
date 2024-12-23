@@ -57,6 +57,14 @@ export const ThirdStory = () => {
             categories={post.categories}
           />
         ))}
+        <Flex
+          className={S.seeMoreBlog}
+          items={"center"}
+          justify="center"
+          onClick={() => window.open("https://notanordinarydev.medium.com/")}
+        >
+          Read More
+        </Flex>
       </div>
     </Flex>
   );

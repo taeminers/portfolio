@@ -44,3 +44,18 @@ export const featuredImage = style({
   minHeight: "500px",
   flexShrink: 0,
 });
+
+export const seeMoreBlog = style({
+  height: "200px",
+  color: "white",
+  background:
+    "linear-gradient(90deg, rgba(57,45,232,1) 0%, rgba(109,109,244,1) 35%, rgba(0,212,255,1) 100%)",
+  outline: "1px dotted gray",
+  padding: "16px",
+  textAlign: "center",
+  cursor: "pointer",
+  ":hover": {
+    scale: 1.01,
+    filter: "brightness(1.1)",
+  },
+});
