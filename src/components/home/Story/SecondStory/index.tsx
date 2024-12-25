@@ -57,7 +57,11 @@ export const SecondStory = () => {
               height={24}
               alt="linkedin"
               className={S.outlinkButton}
-              onClick={() => {}}
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/%ED%83%9C%EB%AF%BC-%EC%9D%B4-5086ba216/"
+                )
+              }
             />
             <Image
               src={"/email_blue.png"}
@@ -65,7 +69,7 @@ export const SecondStory = () => {
               height={24}
               alt="linkedin"
               className={S.outlinkButton}
-              onClick={() => {}}
+              onClick={() => window.open("mailto:taeminers@gmail.com")}
             />
           </Flex>
         </Flex>
