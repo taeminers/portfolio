@@ -31,3 +31,7 @@ export const bottomTabs = style({
 export const tabWrap = style({
   width: "100%",
 });
+
+export const buttonStyle = style({
+  cursor: "pointer",
+});
