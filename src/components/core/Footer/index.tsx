@@ -4,6 +4,10 @@ import * as S from "./styles.css";
 import { IcChevronUpBlack } from "@/icons/IcChevronUpBlack";
 
 export const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={S.container}>
       <div className={S.wrapper}>
@@ -18,7 +22,12 @@ export const Footer = () => {
           <Text>Learn, Build, Grow</Text>
         </Flex>
         <Flex className={S.bottomTabs} justify={"between"}>
-          <Flex gap={20} items={"center"}>
+          <Flex
+            gap={20}
+            items={"center"}
+            onClick={scrollToTop}
+            className={S.buttonStyle}
+          >
             <IcChevronUpBlack />
             <Text>Back Top</Text>
           </Flex>
