@@ -4,7 +4,7 @@ export const container = style({
   width: "100%",
   background: "black",
   color: "black",
-  padding: "40px 60px",
+  padding: "40px 80px",
   overflow: "hidden",
   marginBottom: "120px",
 });

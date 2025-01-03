@@ -3,7 +3,6 @@ import Flex from "@/components/core/Flex";
 import Text from "@/components/core/Text";
 import * as S from "./styles.css";
 import Image from "next/image";
-import { JobCard } from "@/components/core/JobCard";
 export const FirstJob = () => {
   return (
     <Flex items="center" flexDirection="column" className={S.cardWrapper}>

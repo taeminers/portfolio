@@ -59,8 +59,10 @@ export const JobCard = ({
         </Flex>
         <Text variant={"heading6"}>{job_title}</Text>
         <Flex items={"center"} gap={4}>
-          {chip.map((content) => (
-            <Flex className={S.chip}>{content}</Flex>
+          {chip.map((content, index) => (
+            <Flex className={S.chip} key={index}>
+              {content}
+            </Flex>
           ))}
         </Flex>
       </Flex>
