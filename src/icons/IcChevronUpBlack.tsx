@@ -1,13 +1,12 @@
 export const IcChevronUpBlack = () => {
   return (
     <svg
-      className="w-[35px] h-[35px] text-gray-800 dark:text-white"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      width="33"
-      height="33"
+      width="30"
+      height="30"
       fill="black"
-      viewBox="0 0 24 24"
+      viewBox="0 0 300 300"
     >
       <path
         stroke="currentColor"

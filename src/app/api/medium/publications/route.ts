@@ -21,7 +21,6 @@ export async function GET(req: Request) {
       },
     });
   } catch (error) {
-    console.error("Error fetching data from Medium API:", error);
     const errorMessage =
       error instanceof Error ? error.message : "Unknown error";
 

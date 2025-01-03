@@ -10,7 +10,9 @@ import { Separator } from "@/components/core/Separator";
 import { Space } from "@/components/core/Space";
 
 export const ThirdStory = () => {
-  const [mediumPosts, setMediumPosts] = useState<MediumPostResponse>();
+  const [mediumPosts, setMediumPosts] = useState<MediumPostResponse | null>(
+    null
+  );
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -18,14 +20,12 @@ export const ThirdStory = () => {
           method: "GET",
         });
         if (!publicationsResponse.ok) {
-          throw new Error("Failed to fetch data from Medium API");
+          setMediumPosts(null);
         }
         const publicationsData = await publicationsResponse.json();
         setMediumPosts(publicationsData);
       } catch (error) {
-        console.error("Error fetching data from Medium API:", error);
-        const errorMessage =
-          error instanceof Error ? error.message : "Unknown error";
+        setMediumPosts(null);
       }
     };
     fetchData();
@@ -43,28 +43,42 @@ export const ThirdStory = () => {
             Dev Blog
           </Text>
         </Flex>
-        {mediumPosts && <MediumAccount feed={mediumPosts?.feed} />}
+        {mediumPosts ? (
+          <MediumAccount feed={mediumPosts?.feed} />
+        ) : (
+          <Flex>
+            <Text color={"base-white"}>Uh Oh... Somethings Wrong</Text>
+          </Flex>
+        )}
       </Flex>
 
       <div className={S.grid}>
-        {mediumPosts?.items.slice(0, 6).map((post) => (
-          <BlogCard
-            key={post.guid}
-            title={post.title}
-            description={filterNewline(post.description)}
-            date={post.pubDate}
-            link={post.link}
-            categories={post.categories}
-          />
-        ))}
-        <Flex
-          className={S.seeMoreBlog}
-          items={"center"}
-          justify="center"
-          onClick={() => window.open("https://notanordinarydev.medium.com/")}
-        >
-          Read More
-        </Flex>
+        {mediumPosts
+          ? mediumPosts?.items
+              ?.slice(0, 6)
+              .map((post) => (
+                <BlogCard
+                  key={post.guid}
+                  title={post.title}
+                  description={filterNewline(post.description)}
+                  date={post.pubDate}
+                  link={post.link}
+                  categories={post.categories}
+                />
+              ))
+          : null}
+        {
+          <Flex
+            className={S.seeMoreBlog}
+            items={"center"}
+            justify="center"
+            onClick={() => window.open("https://notanordinarydev.medium.com/")}
+          >
+            {mediumPosts
+              ? "Read More"
+              : "Cant Load Posts... Click to Read More"}
+          </Flex>
+        }
       </div>
     </Flex>
   );
