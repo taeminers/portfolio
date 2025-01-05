@@ -11,7 +11,7 @@ export const MySocials = {
   },
   cv: {
     icon: "/resume.png",
-    name: "CV Not Ready",
-    link: "/",
+    name: "CV",
+    link: "https://drive.google.com/file/d/1OOigMjvLBcm4pEZAjjI6LrRVfNCJbBuT/view?usp=sharing",
   },
 };

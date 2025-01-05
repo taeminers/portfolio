@@ -7,13 +7,28 @@ export const container = style({
   padding: "40px 80px",
   overflow: "hidden",
   marginBottom: "120px",
+  "@media": {
+    "screen and (max-width: 760px)": {
+      padding: "40px 20px",
+    },
+  },
+});
+
+export const topSection = style({
+  "@media": {
+    "screen and (max-width: 760px)": {
+      display: "flex",
+      flexDirection: "column",
+      gap: "40px",
+    },
+  },
 });
 
 export const contentWrapper = style({
   display: "flex",
   gap: "20px",
   "@media": {
-    "screen and (max-width: 920px)": {
+    "screen and (max-width: 760px)": {
       flexDirection: "column",
     },
   },

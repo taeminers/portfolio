@@ -14,10 +14,32 @@ export const wrapper = style({
   position: "relative",
 });
 
+export const mobileText = style({
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "14px",
+    },
+  },
+});
+
+export const mobileText2 = style({
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "11px",
+    },
+  },
+});
+
 export const content = style({
   height: "100%",
   width: "100%",
   padding: "200px",
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "40px",
+      paddingTop: "100px",
+    },
+  },
 });
 
 export const topTabs = style({
@@ -26,6 +48,11 @@ export const topTabs = style({
   left: "0",
   padding: "40px 120px",
   width: "100%",
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "20px 40px",
+    },
+  },
 });
 
 export const bottomTabs = style({
@@ -34,6 +61,11 @@ export const bottomTabs = style({
   left: "0",
   padding: "40px 120px",
   width: "100%",
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "20px 40px",
+    },
+  },
 });
 
 export const tabWrap = style({
@@ -51,6 +83,11 @@ export const photoCard = style({
   boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
   position: "relative",
   rotate: "5deg",
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "10px 10px 50px 10px",
+    },
+  },
 });
 
 export const yearForPhoto = style({

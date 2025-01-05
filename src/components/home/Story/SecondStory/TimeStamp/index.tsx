@@ -19,7 +19,9 @@ export const TimeStamp = () => {
           >
             <Text color={"base-white"}>{year}</Text>
             {selectedTab === index && (
-              <Text color={"blue-500"}>I turned {23 + index}</Text>
+              <Text color={"blue-500"} variant={"body4"}>
+                I turned {23 + index}
+              </Text>
             )}
           </div>
         ))}

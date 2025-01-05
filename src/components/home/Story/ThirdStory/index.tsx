@@ -33,7 +33,7 @@ export const ThirdStory = () => {
   return (
     <Flex className={S.container} flexDirection="column" gap={50}>
       <Separator />
-      <Flex justify="between">
+      <Flex justify="between" className={S.topSection}>
         <Flex flexDirection="column">
           <Text variant={"body2"} color={"base-white"}>
             How I Think

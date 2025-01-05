@@ -39,7 +39,11 @@ export const OpenedNavbar = () => {
             }}
           >
             <Flex flexDirection="column" items={"center"} gap={12}>
-              <Text variant={"heading3"} color={"base-white"}>
+              <Text
+                variant={"heading3"}
+                color={"base-white"}
+                style={{ textAlign: "center" }}
+              >
                 You've opened the navbar! Nice!
               </Text>
               <Text
