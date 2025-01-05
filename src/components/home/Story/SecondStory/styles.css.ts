@@ -6,6 +6,21 @@ export const container = style({
   display: "flex",
   flexDirection: "column",
   gap: "120px",
+  "@media": {
+    "(max-width: 768px)": {
+      padding: "40px 20px",
+    },
+  },
+});
+
+export const mobileFlex = style({
+  display: "flex",
+
+  "@media": {
+    "(max-width: 768px)": {
+      flexDirection: "column",
+    },
+  },
 });
 
 export const name = style({

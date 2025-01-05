@@ -23,7 +23,7 @@ export const SecondStory = () => {
         <Text variant={"body6"} color={"base-white"}>
           Hey, I'm
         </Text>
-        <Flex items={"flex-start"}>
+        <Flex items={"flex-start"} className={S.mobileFlex}>
           <div className={S.name}>Taemin Lee</div>
           <Flex items={"center"}>
             <div className={S.locationLottie}>

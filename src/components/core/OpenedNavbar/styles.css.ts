@@ -5,12 +5,22 @@ export const content = style({
   textAlign: "center",
   width: "50%",
   lineHeight: "100%",
+  "@media": {
+    "screen and (max-width: 768px)": {
+      width: "100%",
+    },
+  },
 });
 
 export const separator = style({
   width: "35%",
   height: "1px",
   background: "white",
+  "@media": {
+    "screen and (max-width: 768px)": {
+      width: "100%",
+    },
+  },
 });
 
 export const opened = style({
@@ -18,6 +28,12 @@ export const opened = style({
   // backdropFilter: "blur(105px)",
   width: "700px",
   borderRadius: "0 0 1000px 1000px",
+  "@media": {
+    "screen and (max-width: 760px)": {
+      width: "100%",
+      borderRadius: "0",
+    },
+  },
 });
 
 export const outerContainer = style({
@@ -29,6 +45,11 @@ export const outerContainer = style({
   paddingTop: "20px",
   boxSizing: "border-box",
   alignItems: "center",
+  "@media": {
+    "screen and (max-width: 760px)": {
+      padding: "40px 20px",
+    },
+  },
 });
 
 export const outerBackground = recipe({

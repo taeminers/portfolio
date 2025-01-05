@@ -2,7 +2,6 @@ import Image from "next/image";
 import Flex from "../Flex";
 import Text from "../Text";
 import * as S from "./styles.css";
-import { IcChevronUpBlack } from "@/icons/IcChevronUpBlack";
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -18,7 +17,9 @@ export const Footer = () => {
           gap={50}
           items={"center"}
         >
-          <Text variant={"heading1"}>Let's Get To Work</Text>
+          <Text variant={"heading1"} className={S.mobileText}>
+            Let's Get To Work
+          </Text>
           <Flex className={S.photoCard} items={"center"} gap={20}>
             <Image
               src={"/portfolio_profile.jpeg"}
@@ -34,6 +35,7 @@ export const Footer = () => {
               textUnderlineOffset: 10,
               textEmphasis: "filled",
             }}
+            className={S.mobileText2}
           >
             Send me a DM or Email
           </Text>
@@ -41,17 +43,27 @@ export const Footer = () => {
         <Flex className={S.topTabs}>
           <Flex justify="between" className={S.tabWrap}>
             <Flex flexDirection="column" gap={10}>
-              <Text variant={"heading5"} style={{ fontFamily: "sans-serif" }}>
+              <Text
+                variant={"heading5"}
+                style={{ fontFamily: "sans-serif" }}
+                className={S.mobileText2}
+              >
                 taeminers@gmail.com
               </Text>
-              <Text variant={"heading4"}>
+              <Text variant={"heading4"} className={S.mobileText2}>
                 Software <br /> Developer
               </Text>
             </Flex>
             <Flex flexDirection="column" gap={10}>
-              <Text variant={"heading4"}>SNU CSE 17</Text>
-              <Text variant={"heading4"}>LG CNS</Text>
-              <Text variant={"heading4"}>FACTBLOCK</Text>
+              <Text variant={"heading4"} className={S.mobileText2}>
+                SNU CSE 17
+              </Text>
+              <Text variant={"heading4"} className={S.mobileText2}>
+                LG CNS
+              </Text>
+              <Text variant={"heading4"} className={S.mobileText2}>
+                FACTBLOCK
+              </Text>
             </Flex>
           </Flex>
         </Flex>
