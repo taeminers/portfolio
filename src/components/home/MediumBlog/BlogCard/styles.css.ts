@@ -3,6 +3,9 @@ import { style } from "@vanilla-extract/css";
 export const container = style({
   width: "100%",
   height: "100%",
+  ":hover": {
+    scale: 1.05,
+  },
 });
 
 export const pictureArea = style({

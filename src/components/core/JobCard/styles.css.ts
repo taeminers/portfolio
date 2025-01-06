@@ -6,7 +6,7 @@ export const container = recipe({
     borderRadius: "8px",
     width: "300px",
     flexShrink: 0,
-    background: "white",
+    background: "#F2F3F4",
     padding: "20px",
     scale: 0.95,
   },
@@ -14,6 +14,7 @@ export const container = recipe({
     selected: {
       true: {
         scale: 1,
+        background: "white",
       },
     },
   },
