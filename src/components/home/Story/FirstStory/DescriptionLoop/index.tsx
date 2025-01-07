@@ -4,7 +4,7 @@ import * as S from "./styles.css";
 export const DescriptionLoop = () => {
   const initialArray = [
     "Passionate",
-    "Creative",
+    "Resilient",
     "Innovative",
     "a Dreamer",
     "Ready to Grow",
