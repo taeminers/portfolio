@@ -30,6 +30,14 @@ export const mobileText2 = style({
   },
 });
 
+export const mobileText3 = style({
+  "@media": {
+    "(max-width: 768px)": {
+      fontSize: "7px",
+    },
+  },
+});
+
 export const content = style({
   height: "100%",
   width: "100%",

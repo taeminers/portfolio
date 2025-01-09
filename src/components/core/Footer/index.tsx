@@ -55,12 +55,30 @@ export const Footer = () => {
               </Text>
             </Flex>
             <Flex flexDirection="column" gap={10}>
-              <Text variant={"heading4"} className={S.mobileText2}>
-                SNU CSE 17
-              </Text>
-              <Text variant={"heading4"} className={S.mobileText2}>
-                LG CNS
-              </Text>
+              <Flex items={"flex-start"} gap={10}>
+                <Text
+                  variant={"body6"}
+                  color={"base-black"}
+                  className={S.mobileText3}
+                >
+                  School
+                </Text>
+                <Text variant={"heading4"} className={S.mobileText2}>
+                  SNU CSE 17
+                </Text>
+              </Flex>
+              <Flex items={"flex-start"} justify={"between"} gap={10}>
+                <Text variant={"heading4"} className={S.mobileText2}>
+                  LG CNS
+                </Text>
+                <Text
+                  variant={"body6"}
+                  color={"base-black"}
+                  className={S.mobileText3}
+                >
+                  Career
+                </Text>
+              </Flex>
               <Text variant={"heading4"} className={S.mobileText2}>
                 FACTBLOCK
               </Text>
