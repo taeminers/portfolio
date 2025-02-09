@@ -45,7 +45,7 @@ export const MyJobs = {
     company_name: "FACTBLOCK",
     chip: ["Full-Time", "Next.js", "Blockchain"],
     job_description: "Fablo App",
-    duration: "Feb 2024 - current",
+    duration: "Feb 2024 - Feb 2025",
     year: 2024,
     link: "https://www.playfablo.com/",
   },
