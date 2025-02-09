@@ -25,7 +25,7 @@ export const FourthJob = () => {
         <Image src={"/factblock_logo.jpg"} width={50} height={50} alt="grids" />
       </Flex>
       <Text variant={"body6"} color={"base-lighter"}>
-        Feb 2024 - current
+        Feb 2024 - Feb 2025
       </Text>
     </Flex>
   );
